@@ -29,12 +29,19 @@
 	font-style: normal;
 }
 
+//FONT SIZE____________________________________________________
+@mixin size($size){
+	font-size: #{$size/16}rem;
+}
+
 //COLORS_______________________________________________________
 $colors : (
-    'dark-blue' : #011C43,
-    'light-blue': #8FC4C3,
-    'red' : #EB1E5D,
-    'white': #FFFFFF
+	'blue' : #011C43,
+	'aqua' : #76B2B1,
+	'light-aqua': #8FC4C3,
+	'red': #EB1E4D,
+    'light-red': #EB1E5D,
+	'white': #FFFFFF
 );
 
 @each $name,$value in $colors{
@@ -53,7 +60,7 @@ body{
 
 h1, h2, h3, h4, h5, h6{
     font-weight: normal;
-    margin: 0;
+	margin: 0;
 }
 
 p{
