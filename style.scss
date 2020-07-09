@@ -47,44 +47,83 @@ $colors : (
 	color: map-get($colors, $color);
 }
 
+.red{
+	@include color('red');
+}
+
 @mixin background($color){
 	background-color: map-get($colors, $color);
 }
 
-//GENERAL RESET__________________________________________________
-// body{
-//     margin: 0;
-// }
+//GENERAL______________________________________
+body{
+	font-family: 'IBM-Bold', sans-serif;
+	@include color('white');
+}
 
-// h1, h2, h3, h4, h5, h6{
-//     font-weight: normal;
-// 	margin: 0;
-// }
-
-// p{
-//     margin: 0;
-// }
-
-// a{
-// 	text-decoration: none;
-// 	color: inherit;
-// }
-
-// address{
-//     font-style: normal;
-// }
-
-// input{
-//     color: inherit;
-// }
-
-// button{
-//     color: inherit;
-//     background: none;
-// 	border: none;
-// }
-
-//SECTION______________________________________
 main>section{
 	min-height: 100vh;
+}
+
+//HEADER
+body>header{
+	>div>div{
+		margin-top: 3rem;
+		
+		&:first-of-type{
+			margin-left: 3rem;
+		}
+
+		&:last-of-type{
+			margin-right: 3rem;
+
+			span{
+				@include background('white');
+				height: 5.25rem;
+				width: 5.25rem;
+				border-radius: 100%;
+				box-shadow: 0 3px 6px rgba(0,0,0,0.15);
+			}
+		}
+	}
+}
+
+//HOME SECTION
+#home{
+	background-image: url("media/home-bck.png");
+	background-size: 100% 100%;
+
+	h1{
+		@include size(150);
+		@include color('red');
+
+		>span:last-of-type>span{
+			
+			&::before, &::after{
+				content: url("media/comet.svg");
+			}
+		}
+	}
+
+	p{
+		font-family: 'IBM-Medium', sans-serif;
+		@include size(28);
+		position: relative;
+		top: 2rem;
+
+		&::before{
+			content: "";
+			display: inline-block;
+			width: 7.5rem;
+			height: 0.15rem;
+			flex-shrink: 0;
+			margin-top: 1.5rem;
+			margin-right: 2rem;
+			@include background('red');
+		}
+		
+		>span{
+			display: inline;
+		}
+	}
 }

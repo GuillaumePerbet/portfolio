@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="159.594" height="150.399" viewBox="0 0 159.594 150.399">
+  <defs>
+    <clipPath id="clip-path">
+      <path id="Tracé_78" data-name="Tracé 78" d="M115.121-47.277H86.594l55.233-43.095ZM86.513-53.145l31.593-63.186-4.688,42.194Zm-42.04,5.868L17.766-90.371,73-47.277ZM41.488-116.33,73.08-53.145l-26.9-20.992ZM79.8-188.324a2.73,2.73,0,0,1,2.727,2.727A2.73,2.73,0,0,1,79.8-182.87,2.73,2.73,0,0,1,77.07-185.6a2.73,2.73,0,0,1,2.727-2.727ZM118.57-78.155l7.08-63.715L82.135-54.842V-178.579A7.412,7.412,0,0,0,87.2-185.6a7.411,7.411,0,0,0-7.4-7.4,7.411,7.411,0,0,0-7.4,7.4,7.412,7.412,0,0,0,5.064,7.018V-54.842L33.945-141.87l7.08,63.715L0-110.163,41.87-42.6h75.855l41.869-67.562Z" transform="translate(0 193)" fill="#fff" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="clip-path-2">
+      <path id="Tracé_77" data-name="Tracé 77" d="M-774-405.113H86.319V-3703H-774Z" transform="translate(774 3703)" fill="#fff"/>
+    </clipPath>
+  </defs>
+  <g id="Groupe_88" data-name="Groupe 88" transform="translate(0 193)">
+    <g id="Groupe_87" data-name="Groupe 87" transform="translate(0 -193)" clip-path="url(#clip-path)">
+      <g id="Groupe_86" data-name="Groupe 86" transform="translate(-603.157 -2735.251)" clip-path="url(#clip-path-2)">
+        <path id="Tracé_76" data-name="Tracé 76" d="M-5-198H162.386V-39.808H-5Z" transform="translate(604.261 2929.354)" fill="#fff"/>
+      </g>
+    </g>
+  </g>
+</svg>
