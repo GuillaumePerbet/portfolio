@@ -29,28 +29,26 @@
 	font-style: normal;
 }
 
-//FONT SIZE____________________________________________________
+//FONT SIZE MIXINS____________________________________________________
 @mixin size($size){
 	font-size: #{$size/16}rem;
 }
 
-//COLORS_______________________________________________________
+//COLOR MIXINS_______________________________________________________
 $colors : (
 	'blue' : #011C43,
 	'aqua' : #76B2B1,
 	'light-aqua': #8FC4C3,
 	'red': #EB1E4D,
-    'light-red': #EB1E5D,
 	'white': #FFFFFF
 );
 
-@each $name,$value in $colors{
-    //class
-    .txt-#{$name}{color: $value;}
-    .bck-#{$name}{background-color: $value;}
-    //extension
-    %txt-#{$name}{color: $value;}
-    %bck-#{$name}{background-color: $value;}
+@mixin color($color){
+	color: map-get($colors, $color);
+}
+
+@mixin background($color){
+	background-color: map-get($colors, $color);
 }
 
 //GENERAL RESET__________________________________________________
