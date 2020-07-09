@@ -1,0 +1,86 @@
+//FONTS_________________________________________________________________
+@font-face {
+	font-family: 'IBM-Regular';
+	src:url('fonts/IBMPlexMono-Regular.eot') format('embedded-opentype'),
+        url('fonts/IBMPlexMono-Regular.woff') format('woff'),
+		url('fonts/IBMPlexMono-Regular.ttf') format('truetype'),
+		url('fonts/IBMPlexMono-Regular.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'IBM-Medium';
+	src:url('fonts/IBMPlexMono-Medium.eot') format('embedded-opentype'),
+        url('fonts/IBMPlexMono-Medium.woff') format('woff'),
+		url('fonts/IBMPlexMono-Medium.ttf') format('truetype'),
+		url('fonts/IBMPlexMono-Medium.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'IBM-Bold';
+	src:url('fonts/IBMPlexMono-Bold.eot') format('embedded-opentype'),
+        url('fonts/IBMPlexMono-Bold.woff') format('woff'),
+		url('fonts/IBMPlexMono-Bold.ttf') format('truetype'),
+		url('fonts/IBMPlexMono-Bold.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+//COLORS_______________________________________________________
+$colors : (
+    'dark-blue' : #011C43,
+    'light-blue': #8FC4C3,
+    'red' : #EB1E5D,
+    'white': #FFFFFF
+);
+
+@each $name,$value in $colors{
+    //class
+    .txt-#{$name}{color: $value;}
+    .bck-#{$name}{background-color: $value;}
+    //extension
+    %txt-#{$name}{color: $value;}
+    %bck-#{$name}{background-color: $value;}
+}
+
+//GENERAL RESET__________________________________________________
+body{
+    margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6{
+    font-weight: normal;
+    margin: 0;
+}
+
+p{
+    margin: 0;
+}
+
+ul, ol{
+    margin: 0;
+    padding-left: 0;
+    list-style: none;
+}
+
+a{
+	text-decoration: none;
+	color: inherit;
+}
+
+address{
+    font-style: normal;
+}
+
+input{
+    color: inherit;
+}
+
+button{
+    color: inherit;
+    background: none;
+	border: none;
+}
