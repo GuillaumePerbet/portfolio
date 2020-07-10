@@ -61,12 +61,12 @@ body{
 	@include color('white');
 }
 
-main>section{
+body>header, main>section, body>footer{
 	min-height: 100vh;
 }
 
-//HEADER_________________________________________
-body>header{
+//TOP BAR_________________________________________
+#top-bar{
 	margin-top: 3rem;
 
 	span{//circle around menu
@@ -79,21 +79,27 @@ body>header{
 	}
 }
 
-//HOME SECTION
+//HOME_____________________________________________
 #home{
 	background-image: url("media/home-bck.png");
 	background-size: auto 100%;
 
 	h1{
-		@include size(150);
+		@include size(144);
 		@include color('red');
 
-		svg{//title decoration
-			height: 7rem;
+		>span:last-of-type{//deco title
+			&::before, &::after{
+				content: '';
+				width: 7.427rem;
+				height: 7rem;
+				background-image: url("media/title-deco.svg");
+				background-size: cover;
+			}
 		}
 	}
 
-	p{//text under title
+	h2{//text under title
 		font-family: 'IBM-Medium', sans-serif;
 		@include size(28);
 		position: relative;
@@ -102,7 +108,7 @@ body>header{
 		&::before{//decoration line
 			content: "";
 			display: inline-block;
-			width: 7.5rem;
+			width: 5.5rem;
 			height: 0.15rem;
 			flex-shrink: 0;
 			margin-top: 1.5rem;
