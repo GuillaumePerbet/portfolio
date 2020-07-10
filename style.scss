@@ -29,12 +29,12 @@
 	font-style: normal;
 }
 
-//FONT SIZE MIXINS____________________________________________________
+//FONT SIZE____________________________________________________
 @mixin size($size){
 	font-size: #{$size/16}rem;
 }
 
-//COLOR MIXINS_______________________________________________________
+//COLOR_______________________________________________________
 $colors : (
 	'blue' : #011C43,
 	'aqua' : #76B2B1,
@@ -43,16 +43,16 @@ $colors : (
 	'white': #FFFFFF
 );
 
-@mixin color($color){
+@mixin color($color){//text color mixin
 	color: map-get($colors, $color);
 }
 
-.red{
-	@include color('red');
+@mixin background($color){//background color mixin
+	background-color: map-get($colors, $color);
 }
 
-@mixin background($color){
-	background-color: map-get($colors, $color);
+.red{//red color class
+	@include color('red');
 }
 
 //GENERAL______________________________________
@@ -65,11 +65,11 @@ main>section{
 	min-height: 100vh;
 }
 
-//HEADER
+//HEADER_________________________________________
 body>header{
 	margin-top: 3rem;
 
-	span{
+	span{//circle around menu
 		@include background('white');
 		height: 5.25rem;
 		width: 5.25rem;
@@ -88,18 +88,18 @@ body>header{
 		@include size(150);
 		@include color('red');
 
-		svg{
+		svg{//title decoration
 			height: 7rem;
 		}
 	}
 
-	p{
+	p{//text under title
 		font-family: 'IBM-Medium', sans-serif;
 		@include size(28);
 		position: relative;
 		top: 2rem;
 
-		&::before{
+		&::before{//decoration line
 			content: "";
 			display: inline-block;
 			width: 7.5rem;
@@ -110,12 +110,12 @@ body>header{
 			@include background('red');
 		}
 		
-		>span{
+		>span{//dot
 			display: inline;
 		}
 	}
 
-	>svg{
+	>svg{//background icons
 		height: auto;
 		position: absolute;
 
