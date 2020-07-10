@@ -203,8 +203,8 @@ a{
 
 		a{//contact button
 			display: inline-block;
-			@include size(24);
-			letter-spacing: 0.5rem;
+			@include size(20);
+			letter-spacing: 0.3rem;
 			border: 0.125rem solid map-get($colors, 'red' );
 			border-radius: 3rem;
 			box-shadow: 0 3px 6px rgba(0,0,0,0.15);
