@@ -67,25 +67,15 @@ main>section{
 
 //HEADER
 body>header{
-	>div>div{
-		margin-top: 3rem;
-		
-		&:first-of-type{
-			margin-left: 3rem;
-		}
+	margin-top: 3rem;
 
-		&:last-of-type{
-			margin-right: 3rem;
-
-			span{
-				@include background('white');
-				height: 5.25rem;
-				width: 5.25rem;
-				border-radius: 100%;
-				flex-shrink: 0;
-				box-shadow: 0 3px 6px rgba(0,0,0,0.15);
-			}
-		}
+	span{
+		@include background('white');
+		height: 5.25rem;
+		width: 5.25rem;
+		border-radius: 100%;
+		flex-shrink: 0;
+		box-shadow: 0 3px 6px rgba(0,0,0,0.15);
 	}
 }
 
@@ -98,11 +88,8 @@ body>header{
 		@include size(150);
 		@include color('red');
 
-		>span:last-of-type>span{
-			
-			&::before, &::after{
-				content: url("media/comet.svg");
-			}
+		svg{
+			height: 7rem;
 		}
 	}
 
@@ -128,7 +115,7 @@ body>header{
 		}
 	}
 
-	svg{
+	>svg{
 		height: auto;
 		position: absolute;
 
