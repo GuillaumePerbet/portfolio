@@ -12,16 +12,16 @@
 
     <!-- FIXED TOP BAR -->
     <div id="top-bar" class="container-fluid fixed-top">
-        <div class="row justify-content-between">
+        <div class="row">
             
             <!-- logo -->
-            <div class="col-2 d-flex justify-content-center">
-                <img src="media/logo.png" alt="lettre g et p arrondies et inclinées avec un effet d'épaisseur" width="123" height="85">
+            <div class="col-2 text-center">
+                <a href="#home"><img src="media/logo.png" alt="lettre g et p arrondies et inclinées avec un effet d'épaisseur" width="123" height="85"></a>
             </div>
 
             <!-- menu -->
-            <div class="col-2 d-flex justify-content-center">
-                <span class="d-flex justify-content-center align-items-center">
+            <div class="col-2 offset-8">
+                <span class="mx-auto d-flex justify-content-center align-items-center">
                     <svg xmlns="http://www.w3.org/2000/svg" width="53" height="31" viewBox="0 0 53 31"><g transform="translate(-1753 -130)"><rect width="53" height="5" rx="2.5" transform="translate(1753 130)" fill="#eb1e4d"/><rect width="53" height="5" rx="2.5" transform="translate(1753 143)" fill="#eb1e4d"/><rect width="53" height="5" rx="2.5" transform="translate(1753 156)" fill="#eb1e4d"/></g></svg>
                 </span>
             </div>
@@ -33,8 +33,8 @@
     <header id="home" class="container-fluid d-flex flex-column justify-content-center">
         
         <!-- title -->
-        <div class="row justify-content-center">
-            <h1 class="col-8">
+        <div class="row">
+            <h1 class="col-8 offset-2">
                 <span class="d-flex justify-content-between">
                     <span>G</span><span>U</span><span>I</span><span>L</span><span>L</span><span>A</span><span>U</span><span>M</span><span>E</span>
                 </span>
@@ -98,31 +98,38 @@
     </header>
 
     <main>
-        
+
         <!-- ABOUT -->
-        <section id="about" class="container-fluid">
+        <section id="about" class="container-fluid d-flex flex-column justify-content-center">
             <div class="container">
-                <header class="row justify-content-center">
-                    <div class="col-8">
-                        <h2>UN EX-PROF DE MATHS SE MET EN ORBITE AUTOUR DU WEB<span>.</span></h2>
+
+                <!-- title -->
+                <header class="row">
+                    <div class="col-8 offset-2">
+                        <h2 class="mb-4 text-center">UN EX-PROF DE MATHS SE MET EN ORBITE AUTOUR DU WEB<span class="red">.</span></h2>
                     </div>
                 </header>
 
-                <div class="row justify-content-center">
-                    <div class="col-6">
-                        <p>Souhaite intégrer un équipage pour une mission <strong>d’octobre à novembre 2020</strong>.</p>
+                <!-- status -->
+                <div class="row">
+                    <div class="col-6 offset-3">
+                        <p id="status" class="text-center">Souhaite intégrer un équipage pour une mission <strong>d’octobre à novembre 2020</strong>.</p>
                     </div>
                 </div>
 
-                <div class="row justify-content-center">
-                    <div class="col-6">
-                        <p><img src="" alt="" width="212" height="212"></p>
+                <!-- portrait -->
+                <div class="row">
+                    <div class="col-6 offset-3">
+                        <p id="portrait" class="d-flex justify-content-between align-items-center">
+                            <img class="mr-4 ml-4" src="media/portrait.png" alt="portrait de Guillaume Perbet" width="230" height="230">
+                        </p>
                     </div>
                 </div>
 
-                <footer class="row justify-content-center">
-                    <div class="col-6">
-                        <p><a href="#contact">CONTACTEZ-MOI</a></p>
+                <!-- button -->
+                <footer class="row">
+                    <div class="col-6 offset-3">
+                        <p class="text-center"><a class="w-100 py-3" href="#contact">CONTACTEZ-MOI</a></p>
                     </div>
                 </footer>
             </div>
