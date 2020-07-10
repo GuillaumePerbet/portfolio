@@ -82,6 +82,7 @@ body>header{
 				height: 5.25rem;
 				width: 5.25rem;
 				border-radius: 100%;
+				flex-shrink: 0;
 				box-shadow: 0 3px 6px rgba(0,0,0,0.15);
 			}
 		}
@@ -91,7 +92,7 @@ body>header{
 //HOME SECTION
 #home{
 	background-image: url("media/home-bck.png");
-	background-size: 100% 100%;
+	background-size: auto 100%;
 
 	h1{
 		@include size(150);
@@ -124,6 +125,41 @@ body>header{
 		
 		>span{
 			display: inline;
+		}
+	}
+
+	svg{
+		height: auto;
+		position: absolute;
+
+		&#header-comet{
+			width: 8vw;
+			top: 0;
+			right: 35vw;
+		}
+	
+		&#header-drone{
+			width: 7vw;
+			bottom: 0;
+			left: 1.5vw;
+		}
+	
+		&#header-plant{
+			width: 7vw;
+			bottom: 0;
+			right: 13vw;
+		}
+
+		&#header-sun{
+			width: 8vw;
+			bottom: 0;
+			right: 4vw;
+		}
+
+		&#header-feather{
+			width: 7vw;
+			bottom: 28vh;
+			right: 0;
 		}
 	}
 }
