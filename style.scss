@@ -218,6 +218,10 @@ a{
 	overflow: hidden;
 	@include background('blue');
 
+	h2{
+		@include size(62);
+	}
+
 	>svg{//background icon
 		height: auto;
 		position: absolute;
