@@ -211,3 +211,21 @@ a{
 		}
 	}
 }
+
+//SKILL
+#skill{
+	position: relative;
+	overflow: hidden;
+	@include background('blue');
+
+	>svg{//background icon
+		height: auto;
+		position: absolute;
+
+		&#skill-big-plant{
+			width: 45vw;
+			bottom: 0;
+			left: -3vw;
+		}
+	}
+}
