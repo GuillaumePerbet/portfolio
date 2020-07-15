@@ -70,6 +70,8 @@ body>header, main>section, body>footer{
 
 a{
 	color: inherit;
+	position: relative;
+	z-index: 1;
 
 	&:hover{
 		color: inherit;
@@ -102,6 +104,7 @@ a{
 		>span:last-of-type{//deco title
 			&::before, &::after{
 				content: '';
+				display: block;
 				width: 7.427rem;
 				height: 7rem;
 				background-image: url("media/home-title-deco.svg");
@@ -239,44 +242,40 @@ a{
 #skill{
 	@include background('blue');
 
-	>div{
-		min-height: 100vh;
+	h2{
+		@include size(62);
+	}
 
-		h2{
-			@include size(62);
+	p{//skill description
+		font-family: 'IBM-Medium', sans-serif;
+		@include size(17);
+
+		&#bdd{
+			&::before{
+				content: url('media/skill-bdd-deco.svg');
+			}
 		}
-	
-		p{//skill description
-			font-family: 'IBM-Medium', sans-serif;
-			@include size(17);
-	
-			&#bdd{
-				&::before{
-					content: url('media/skill-bdd-deco.svg');
-				}
+
+		&#dynamic{
+			&::before{
+				content: url('media/skill-dynamic-deco.svg');
 			}
-	
-			&#dynamic{
-				&::before{
-					content: url('media/skill-dynamic-deco.svg');
-				}
+		}
+
+		&#integration{
+			&::before{
+				content: url('media/skill-integration-deco.svg');
 			}
-	
-			&#integration{
-				&::before{
-					content: url('media/skill-integration-deco.svg');
-				}
-			}
-	
-			&#secure{
-				&::before{
-					content: url('media/skill-secure-deco.svg');
-				}
+		}
+
+		&#secure{
+			&::before{
+				content: url('media/skill-secure-deco.svg');
 			}
 		}
 	}
 	
-	>svg{//background icon
+	>svg{//background icons
 		height: auto;
 		position: absolute;
 
@@ -291,6 +290,63 @@ a{
 //PROJECT________________________________________________________
 #project{
 	@include background('cream');
+	@include color('blue');
+	@include size(20);
+
+	#carousel{
+
+		>div{
+
+			&:first-of-type{//prev
+				writing-mode: sideways-lr;
+			}
+
+			&:last-of-type{//next
+				writing-mode: sideways-rl;
+			}
+
+			a:hover{
+				@include color('red');
+			}
+
+			img{//project image
+				position: relative;
+				z-index: 1;
+				width: 100%;
+				height: auto;
+			}
+		}
+	}
+
+	#project-title{
+		@include size(34);
+		position: relative;
+
+		&::before{
+			content: '';
+			position: absolute;
+			bottom: 110%;
+			display: block;
+			width: 7.5rem;
+			height: 7.0625rem;
+			background-image: url("media/project-title-deco.svg");
+			background-size: cover;
+		}
+	}
+
+	#project-link{
+		@include color('red');
+
+		&::before{//decoration line
+			content: "";
+			display: inline-block;
+			width: 5rem;
+			height: 0.15rem;
+			margin-right: 1rem;
+			margin-bottom: 0.4rem;
+			@include background('red');
+		}
+	}
 
 	>svg{//background icons
 		height: auto;
