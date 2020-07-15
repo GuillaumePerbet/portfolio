@@ -40,7 +40,8 @@ $colors : (
 	'aqua' : #76B2B1,
 	'light-aqua': #8FC4C3,
 	'red': #EB1E4D,
-	'white': #FFFFFF
+	'white': #FFFFFF,
+	'cream': #F5F5F5
 );
 
 @mixin color($color){//text color mixin
@@ -63,6 +64,8 @@ body{
 
 body>header, main>section, body>footer{
 	min-height: 100vh;
+	position: relative;
+	overflow: hidden;
 }
 
 a{
@@ -90,8 +93,7 @@ a{
 
 //HOME_____________________________________________
 #home{
-	background-image: url("media/home-bck.png");
-	background-size: 100% auto;
+	@include background('blue');
 
 	h1{
 		@include size(144);
@@ -102,7 +104,7 @@ a{
 				content: '';
 				width: 7.427rem;
 				height: 7rem;
-				background-image: url("media/hometitle-deco.svg");
+				background-image: url("media/home-title-deco.svg");
 				background-size: cover;
 			}
 		}
@@ -138,38 +140,47 @@ a{
 			width: 8vw;
 			top: 0;
 			right: 35vw;
+			z-index: 2;
 		}
 	
 		&#header-drone{
 			width: 7vw;
 			bottom: 0;
 			left: 1.5vw;
+			z-index: 2;
 		}
 	
 		&#header-plant{
 			width: 7vw;
 			bottom: 0;
 			right: 13vw;
+			z-index: 2;
 		}
 
 		&#header-sun{
 			width: 8vw;
 			bottom: 0;
 			right: 4vw;
+			z-index: 2;
 		}
 
 		&#header-feather{
 			width: 7vw;
 			bottom: 28vh;
 			right: 0;
+			z-index: 2;
+		}
+
+		&#home-stars{
+			width: 100vw;
+			z-index: 1;
 		}
 	}
 }
 
 //ABOUT__________________________________________________
 #about{
-	background-image: url("media/about-bck.png");
-	background-size: 100% auto;
+	@include background('cream');
 
 	h2{
 		@include color('blue');
@@ -190,6 +201,8 @@ a{
 		}
 
 		&#portrait{
+			position: relative;
+			z-index: 1;
 	
 			&::before{//icon
 				content: url('media/about-left-deco.svg');
@@ -209,12 +222,21 @@ a{
 			box-shadow: 0 3px 6px rgba(0,0,0,0.15);
 		}
 	}
+
+	>svg{//background icons
+		height: auto;
+		position: absolute;
+
+		&#about-bck{
+			width: 100vw;
+			top: -10vh;
+			left: 2vw;
+		}
+	}
 }
 
-//SKILL
+//SKILL___________________________________________________________
 #skill{
-	position: relative;
-	overflow: hidden;
 	@include background('blue');
 
 	>div{
@@ -262,6 +284,34 @@ a{
 			width: 45vw;
 			bottom: 0;
 			left: -3vw;
+		}
+	}
+}
+
+//PROJECT________________________________________________________
+#project{
+	@include background('cream');
+
+	>svg{//background icons
+		height: auto;
+		position: absolute;
+
+		&#project-big-plant{
+			width: 117vw;
+			top: -34vh;
+			right: -5vw;
+		}
+
+		&#project-feather{
+			width: 7vw;
+			bottom: 33vh;
+			left: 0;
+		}
+
+		&#project-drone{
+			width: 7vw;
+			top: 0;
+			right: 2vw;
 		}
 	}
 }
