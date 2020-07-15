@@ -71,7 +71,7 @@ body>header, main>section, body>footer{
 a{
 	color: inherit;
 	position: relative;
-	z-index: 1;
+	z-index: 2;
 
 	&:hover{
 		color: inherit;
@@ -139,44 +139,44 @@ a{
 		height: auto;
 		position: absolute;
 
-		&#header-comet{
+		&#home-comet{
 			width: 8vw;
 			top: 0;
 			right: 35vw;
-			z-index: 2;
+			z-index: 1;
 		}
 	
-		&#header-drone{
+		&#home-drone{
 			width: 7vw;
 			bottom: 0;
 			left: 1.5vw;
-			z-index: 2;
+			z-index: 1;
 		}
 	
-		&#header-plant{
+		&#home-plant{
 			width: 7vw;
 			bottom: 0;
 			right: 13vw;
-			z-index: 2;
+			z-index: 1;
 		}
 
-		&#header-sun{
+		&#home-sun{
 			width: 8vw;
 			bottom: 0;
 			right: 4vw;
-			z-index: 2;
+			z-index: 1;
 		}
 
-		&#header-feather{
+		&#home-feather{
 			width: 7vw;
 			bottom: 28vh;
 			right: 0;
-			z-index: 2;
+			z-index: 1;
 		}
 
 		&#home-stars{
 			width: 100vw;
-			z-index: 1;
+			z-index: 0;
 		}
 	}
 }
@@ -309,7 +309,7 @@ a{
 				@include color('red');
 			}
 
-			&#image{
+			&#image{//project image
 				position: relative;
 
 				#coin{
@@ -321,11 +321,11 @@ a{
 					@include background('light-aqua');
 					border-radius: 100%;
 					opacity: 0.7;
-					z-index: 2;
+					z-index: 3;
 					@include size(26);
 				}
 	
-				img{//project image
+				img{
 					position: relative;
 					z-index: 1;
 					width: 100%;
@@ -339,7 +339,7 @@ a{
 		@include size(34);
 		position: relative;
 
-		&::before{
+		&::before{//project title deco
 			content: '';
 			position: absolute;
 			bottom: 110%;
@@ -385,6 +385,34 @@ a{
 			width: 7vw;
 			top: 0;
 			right: 2vw;
+		}
+	}
+}
+
+//CONTACT_______________________________________________
+#contact{
+	@include background('blue');
+
+	>svg{//background icons
+		height: auto;
+		position: absolute;
+
+		&#contact-lateral-stars{
+			width: 98vw;
+			left: 0;
+			bottom: 4vh;
+		}
+
+		&#contact-horizontal-stars{
+			height: 100vh;
+			width: auto;
+			top: 0;
+		}
+
+		&#contact-planet{
+			width: 14vw;
+			top: 1vh;
+			right: 1vw;
 		}
 	}
 }
