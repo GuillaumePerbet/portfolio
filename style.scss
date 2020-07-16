@@ -93,13 +93,22 @@ button{//button reset and z-position
 //TOP BAR_________________________________________
 #top-bar{
 
+	#logo{
+		height: 4vw;
+		width: auto;
+	}
+
 	#menu-btn{//circle around menu
 		@include background('white');
-		height: 5.25rem;
-		width: 5.25rem;
 		border-radius: 100%;
 		box-shadow: 0 3px 6px rgba(0,0,0,0.15);
 		cursor: pointer;
+		width: 4vw;
+		height: 4vw;
+
+		svg{
+			width: 2vw;
+		}
 	}
 }
 
