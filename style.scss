@@ -29,13 +29,12 @@
 	font-style: normal;
 }
 
-//FONT SIZE____________________________________________________
-@mixin size($size){
+//FONTS AND COLORS____________________________________________________
+@mixin size($size){//font size mixin
 	font-size: #{$size/16}rem;
 }
 
-//COLOR_______________________________________________________
-$colors : (
+$colors : (//colors table
 	'blue' : #011C43,
 	'aqua' : #76B2B1,
 	'light-aqua': #8FC4C3,
@@ -57,18 +56,18 @@ $colors : (
 }
 
 //GENERAL______________________________________
-body{
+body{//default IBM Bold white
 	font-family: 'IBM-Bold', sans-serif;
 	@include color('white');
 }
 
-body>header, main>section, body>footer{
+body>header, main>section, body>footer{//section parameters
 	min-height: 100vh;
 	position: relative;
 	overflow: hidden;
 }
 
-a{
+a{//link reset and z-position
 	color: inherit;
 	position: relative;
 	z-index: 2;
@@ -79,11 +78,16 @@ a{
 	}
 }
 
+.icon{//svg background icon
+	height: auto;
+	position: absolute;
+	z-index: 1;
+}
+
 //TOP BAR_________________________________________
 #top-bar{
-	margin-top: 3rem;
 
-	span{//circle around menu
+	#menu-btn{//circle around menu
 		@include background('white');
 		height: 5.25rem;
 		width: 5.25rem;
@@ -97,12 +101,11 @@ a{
 #home{
 	@include background('blue');
 
-	h1{
+	h1{//title
 		@include size(144);
-		@include color('red');
 
-		>span:last-of-type{//deco title
-			&::before, &::after{
+		>span:last-of-type{
+			&::before, &::after{//deco title
 				content: '';
 				display: block;
 				width: 7.427rem;
@@ -113,15 +116,16 @@ a{
 		}
 	}
 
-	h2{//text under title
+	h2{//subtitle
 		font-family: 'IBM-Medium', sans-serif;
 		@include size(28);
+		//down with no h1 up
 		position: relative;
 		top: 2rem;
 
 		&::before{//decoration line
 			content: "";
-			display: inline-block;
+			display: block;
 			width: 5.5rem;
 			height: 0.15rem;
 			flex-shrink: 0;
@@ -129,49 +133,38 @@ a{
 			margin-right: 2rem;
 			@include background('red');
 		}
-		
-		>span{//dot
-			display: inline;
-		}
 	}
 
 	>svg{//background icons
-		height: auto;
-		position: absolute;
 
 		&#home-comet{
 			width: 8vw;
 			top: 0;
 			right: 35vw;
-			z-index: 1;
 		}
 	
 		&#home-drone{
 			width: 7vw;
 			bottom: 0;
 			left: 1.5vw;
-			z-index: 1;
 		}
 	
 		&#home-plant{
 			width: 7vw;
 			bottom: 0;
 			right: 13vw;
-			z-index: 1;
 		}
 
 		&#home-sun{
 			width: 8vw;
 			bottom: 0;
 			right: 4vw;
-			z-index: 1;
 		}
 
 		&#home-feather{
 			width: 7vw;
 			bottom: 28vh;
 			right: 0;
-			z-index: 1;
 		}
 
 		&#home-stars{
@@ -185,16 +178,15 @@ a{
 #about{
 	@include background('cream');
 
-	h2{
+	h2{//title
 		@include color('blue');
 		@include size(62);
 	}
 
-	p{//status text and contact button
-		@include color('red');
+	p{//status and button
 		@include size(22);
 
-		&#status{
+		&#status{//status
 			font-family: 'IBM-Medium', sans-serif;
 			
 			strong{//period
@@ -203,32 +195,30 @@ a{
 			}
 		}
 
-		&#portrait{
+		&#portrait{//portrait
 			position: relative;
-			z-index: 1;
+			z-index: 2;
 	
-			&::before{//icon
+			&::before{//deco
 				content: url('media/about-left-deco.svg');
 			}
 	
-			&::after{//icon
+			&::after{//deco
 				content: url('media/about-right-deco.svg');
 			}
 		}
 
 		a{//contact button
-			display: inline-block;
+			display: block;
 			@include size(20);
 			letter-spacing: 0.3rem;
-			border: 0.125rem solid map-get($colors, 'red' );
+			border: 0.125rem solid map-get($colors,'red');
 			border-radius: 3rem;
 			box-shadow: 0 3px 6px rgba(0,0,0,0.15);
 		}
 	}
 
 	>svg{//background icons
-		height: auto;
-		position: absolute;
 
 		&#about-bck{
 			width: 100vw;
@@ -242,42 +232,40 @@ a{
 #skill{
 	@include background('blue');
 
-	h2{
+	h2{//title
 		@include size(62);
 	}
 
-	p{//skill description
+	p{//skills
 		font-family: 'IBM-Medium', sans-serif;
 		@include size(17);
 
 		&#bdd{
-			&::before{
+			&::before{//deco
 				content: url('media/skill-bdd-deco.svg');
 			}
 		}
 
 		&#dynamic{
-			&::before{
+			&::before{//deco
 				content: url('media/skill-dynamic-deco.svg');
 			}
 		}
 
 		&#integration{
-			&::before{
+			&::before{//deco
 				content: url('media/skill-integration-deco.svg');
 			}
 		}
 
 		&#secure{
-			&::before{
+			&::before{//deco
 				content: url('media/skill-secure-deco.svg');
 			}
 		}
 	}
 	
 	>svg{//background icons
-		height: auto;
-		position: absolute;
 
 		&#skill-big-plant{
 			width: 45vw;
@@ -293,7 +281,7 @@ a{
 	@include color('blue');
 	@include size(20);
 
-	#carousel{
+	#carousel{//carousel
 
 		>div{
 
@@ -305,54 +293,45 @@ a{
 				writing-mode: sideways-rl;
 			}
 
-			a:hover{
+			a:hover{//prev next
 				@include color('red');
 			}
 
-			&#image{//project image
-				position: relative;
+			img{//image
+				width: 100%;
+				height: auto;
+			}
 
-				#coin{
-					position: absolute;
-					left: -2.5rem;
-					top: 1rem;
-					width: 7.5rem;
-					@include color('white');
-					@include background('light-aqua');
-					border-radius: 100%;
-					opacity: 0.7;
-					z-index: 3;
-					@include size(26);
-				}
-	
-				img{
-					position: relative;
-					z-index: 1;
-					width: 100%;
-					height: auto;
-				}
+			#coin{//coin
+				position: absolute;
+				left: -2.5rem;
+				top: 1rem;
+				width: 7.5rem;
+				@include color('white');
+				@include background('light-aqua');
+				border-radius: 100%;
+				opacity: 0.7;
+				z-index: 3;
+				@include size(26);
 			}
 		}
 	}
 
-	#project-title{
+	#project-title{//title
 		@include size(34);
-		position: relative;
 
-		&::before{//project title deco
+		&::before{//title deco
 			content: '';
 			position: absolute;
-			bottom: 110%;
 			display: block;
 			width: 7.5rem;
 			height: 7.0625rem;
+			bottom: 105%;
 			background-image: url("media/project-title-deco.svg");
-			background-size: cover;
 		}
 	}
 
 	#project-link{
-		@include color('red');
 
 		&::before{//decoration line
 			content: "";
@@ -366,8 +345,6 @@ a{
 	}
 
 	>svg{//background icons
-		height: auto;
-		position: absolute;
 
 		&#project-big-plant{
 			width: 117vw;
@@ -394,8 +371,6 @@ a{
 	@include background('blue');
 
 	>svg{//background icons
-		height: auto;
-		position: absolute;
 
 		&#contact-lateral-stars{
 			width: 98vw;
