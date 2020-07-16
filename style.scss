@@ -78,6 +78,10 @@ a{//link reset and z-position
 	}
 }
 
+button{//button reset
+	color: inherit;
+}
+
 .icon{//svg background icon
 	height: auto;
 	position: absolute;
@@ -370,6 +374,78 @@ a{//link reset and z-position
 #contact{
 	@include background('blue');
 
+	#border-deco{
+		border: 2px solid map-get($colors,'light-aqua');
+		border-radius: 1rem;
+		margin: 5vh 3vw;
+	}
+
+	form{//form
+
+		span{//red star
+			margin-left: -0.8rem;
+		}
+
+		.deco{//underline
+			border-bottom: 3px solid map-get($colors,'light-aqua');
+		}
+
+		input{//input
+			background: none;
+			// border: none;
+		}
+
+		label{//label
+			@include size(22);
+			font-family: 'IBM-Regular', sans-serif;
+		}
+
+		label[for=name], input[name=name]{//name
+			@include size(50);
+			font-family: 'IBM-Bold', sans-serif;
+		}
+
+		button{//submit button
+			@include size(20);
+			@include background('light-aqua');
+			letter-spacing: 0.3rem;
+			border: none;
+			border-radius: 3rem;
+			box-shadow: 0 3px 6px rgba(0,0,0,0.15);
+		}
+	}
+
+	#bottom-bar{
+		bottom: 0;
+		text-decoration: underline;
+
+		#social{
+
+			svg{
+				@include background('blue');
+				padding: 1rem 0 0 1.8vw;
+				box-sizing: content-box;
+			}
+
+			address{
+				@include background('blue');
+				@include size(22);
+				padding-right: 1rem;
+
+				&::before{
+					content: url('media/contact-mail.svg');
+					display: inline-block;
+					margin: 1rem 0.5rem 1.2vh 2vw;
+				}
+			}
+		}
+
+		#legal{
+			padding-right: 5vw;
+			margin-bottom: 1vh;
+		}
+	}
+
 	>svg{//background icons
 
 		&#contact-lateral-stars{
@@ -388,6 +464,12 @@ a{//link reset and z-position
 			width: 14vw;
 			top: 1vh;
 			right: 1vw;
+		}
+
+		&#contact-sun{
+			width: 8vw;
+			bottom: 5vh;
+			right: 5vw;
 		}
 	}
 }
