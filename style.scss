@@ -239,7 +239,7 @@ button{//button reset and z-position
 	@include background('blue');
 
 	h2{//title
-		@include size(62);
+		@include size(58);
 	}
 
 	p{//skills
@@ -269,6 +269,44 @@ button{//button reset and z-position
 			&::before{//deco
 				content: url('media/skill-secure-deco.svg');
 			}
+		}
+	}
+
+	#galaxy{
+
+		svg{
+			position: absolute;
+			top: 50%;
+			right: 25%;
+			transform: translate(50%,-50%);
+		}
+
+		#skill-planet{
+			height: 10%;
+		}
+
+		#skill-stars-1{
+			height: 23%;
+		}
+
+		#skill-circle-1{
+			height: 32%;
+		}
+
+		#skill-circle-2{
+			height: 45%;
+		}
+
+		#skill-stars-2{
+			height: 60%;
+		}
+
+		#skill-circle-3{
+			height: 65%;
+		}
+
+		#skill-stars-3{
+			height: 77%;
 		}
 	}
 	
