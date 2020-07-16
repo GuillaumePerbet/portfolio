@@ -78,8 +78,10 @@ a{//link reset and z-position
 	}
 }
 
-button{//button reset
+button{//button reset and z-position
 	color: inherit;
+	position: relative;
+	z-index: 2;
 }
 
 .icon{//svg background icon
@@ -243,6 +245,7 @@ button{//button reset
 	p{//skills
 		font-family: 'IBM-Medium', sans-serif;
 		@include size(17);
+		max-width: 14rem;
 
 		&#bdd{
 			&::before{//deco
@@ -393,6 +396,7 @@ button{//button reset
 		input{//input
 			background: none;
 			// border: none;
+			flex-grow: 1;
 		}
 
 		label{//label
