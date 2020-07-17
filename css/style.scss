@@ -564,7 +564,10 @@ button{//button reset and z-position
 
 	a{
 		@include color('red');
-		text-decoration: underline;
+
+		&:hover{
+			text-decoration: underline;
+		}
 	}
 }
 
@@ -572,4 +575,5 @@ button{//button reset and z-position
 #project-image{
 	background-image: url('../media/hiking-image.png');
 	background-size: auto 100%;
+	background-position: center;
 }
