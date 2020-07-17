@@ -538,3 +538,24 @@ button{//button reset and z-position
 	}
 }
 
+//PROJECT HOME__________________________________________
+#project-home{
+	overflow-y: visible;
+
+	&-image{
+		position: relative;
+		z-index: 2;
+		margin-top: 7rem;
+
+		img{
+			max-height: 80vh;
+			width: auto;
+		}
+	}
+
+	&-plant{//background icon
+		width: 120vw;
+		right: -6vw;
+		top: -22vh;
+	}
+}
