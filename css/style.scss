@@ -149,7 +149,7 @@ button{//button reset and z-position
 		}
 	}
 
-	//home background icons
+	//home background
 	&-comet{
 		width: 8vw;
 		top: 0;
@@ -229,7 +229,7 @@ button{//button reset and z-position
 		box-shadow: 0 3px 6px rgba(0,0,0,0.15);
 	}
 
-	//about background icons
+	//about background
 	&-bck{
 		width: 100vw;
 		top: -10vh;
@@ -306,7 +306,7 @@ button{//button reset and z-position
 		}
 	}
 
-	//skill background icons
+	//skill background
 	&-big-plant{
 		width: 45vw;
 		bottom: 0;
@@ -379,7 +379,7 @@ button{//button reset and z-position
 		@include background('red');
 	}
 
-	//project background icons
+	//project background
 	&-big-plant{
 		width: 117vw;
 		top: -34vh;
@@ -478,7 +478,7 @@ button{//button reset and z-position
 		}
 	}
 
-	//contact background icons
+	//contact background
 	&-lateral-stars{
 		width: 98vw;
 		left: 0;
@@ -531,9 +531,39 @@ button{//button reset and z-position
 		}
 	}
 
-	&-plant{//background icon
+	&-plant{//project home background
 		width: 100vw;
 		right: 0vw;
 		top: -40vh;
+	}
+}
+
+//PROJECT DESCRITPTION________________________________
+#project-description{
+	@include color('blue');
+	@include size(18);
+
+	>div{
+		min-height: 100vh;
+
+		&::before{//project description decoration line
+			content: "";
+			display: block;
+			width: 0.125rem;
+			height: 5rem;
+			margin: 3rem auto;
+			@include background('red');
+		}
+	}
+
+	&-text{//project description text
+		font-family: 'IBM-Regular', sans-serif;
+		@include size(22);
+		line-height: 2.5rem;
+	}
+
+	a{
+		@include color('red');
+		text-decoration: underline;
 	}
 }
