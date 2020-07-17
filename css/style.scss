@@ -79,15 +79,43 @@ a{//link reset and z-position
 }
 
 button{//button reset and z-position
+	border: none;
 	color: inherit;
 	position: relative;
 	z-index: 2;
+}
+
+ul{//list reset
+	list-style: none;
 }
 
 .icon{//svg background icon
 	height: auto;
 	position: absolute;
 	z-index: 1;
+}
+
+//MENU____________________________________________
+#menu{
+	height: 100vh;
+	position: absolute;
+	z-index: 3;
+	font-family: 'IBM-Medium', sans-serif;
+	@include background('light-aqua');
+	@include size(60);
+
+	&-close{//menu close button
+		@include background('white');
+		border-radius: 100%;
+		box-shadow: 0 3px 6px rgba(0,0,0,0.15);
+		cursor: pointer;
+		width: 4vw;
+		height: 4vw;
+
+		svg{
+			width: 2vw;
+		}
+	}
 }
 
 //TOP BAR_________________________________________
