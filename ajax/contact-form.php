@@ -38,23 +38,21 @@ $me = "perbet.dev@gmail.com";
 $object = "Contact Portfolio";
 $body = "
     Message de $name\r\n
-    Société $society\r\n
-    Téléphone $phone\r\n
-    Email $email\r\n
-    Sujet $subject\r\n
-    Message:\r\n
+    Société : $society\r\n
+    Téléphone : $phone\r\n
+    Email : $email\r\n
+    Sujet : $subject\r\n
+    Message\r\n
     $message
 ";
 
 //prepare headers
-$headers = "
-    From: $email \r\n
-    Reply-To: $email \r\n
-    MIME-Version: 1.0\r\n
-    Content-type: text/plain; charset=iso-8859-1\r\n
-    X-Priority: 3\r\n
-    X-Mailer: PHP". phpversion()
-;
+$headers = "From: $me \r\n";
+$headers .= "Reply-To: ".$email."\r\n";
+$headers .= "MIME-Version: 1.0\r\n";
+$headers .= "Content-type: text/plain; charset=iso-8859-1\r\n";
+$headers .= "X-Priority: 3\r\n";
+$headers .= "X-Mailer: PHP". phpversion() ."\r\n";
 
-//send email
+// Send the email
 mail($me, $object, $body, $headers);
