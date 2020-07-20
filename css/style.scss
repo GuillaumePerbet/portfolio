@@ -87,6 +87,7 @@ button{//button reset and z-position
 
 ul{//list reset
 	list-style: none;
+	padding: 0;
 }
 
 .icon{//svg background icon
@@ -99,6 +100,8 @@ ul{//list reset
 #menu{
 	height: 100vh;
 	position: absolute;
+	overflow: hidden;
+	top: 0;
 	z-index: 3;
 	font-family: 'IBM-Medium', sans-serif;
 	@include background('light-aqua');
@@ -112,9 +115,33 @@ ul{//list reset
 		width: 4vw;
 		height: 4vw;
 
-		svg{
+		svg{//menu close icon
 			width: 2vw;
 		}
+	}
+
+	a:hover{//menu nav items
+		@include color('blue');
+
+		&::after{//menu nav item underline
+			content: "";
+			display: block;
+			width: 8.75rem;
+			height: 0.15rem;
+			@include background('red');
+			margin-bottom: -0.15rem;
+		}
+	}
+
+	&-ursa{
+		width: 8vw;
+		top: 18vh;
+		left: 6vw;
+	}
+
+	&-stars{
+		width: 100vw;
+		top: 0;
 	}
 }
 
@@ -134,7 +161,7 @@ ul{//list reset
 		width: 4vw;
 		height: 4vw;
 
-		svg{
+		svg{//top bar menu icon
 			width: 2vw;
 		}
 	}
