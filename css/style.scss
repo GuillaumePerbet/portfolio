@@ -467,6 +467,8 @@ ul{//list reset
 	}
 
 	form{//contact form
+		position: relative;
+		z-index: 2;
 
 		span{//contact red star
 			margin-left: -0.8rem;

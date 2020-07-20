@@ -33,3 +33,11 @@ closeBtn.addEventListener('click',()=>{
     const topBar = document.getElementById('top-bar');
     topBar.classList.remove('d-none');
 });
+
+//CONTACT FORM SUBMIT___________________________________________________
+const contactForm = document.querySelector("#contact form");
+contactForm.addEventListener('submit',(e)=>{
+    e.preventDefault();
+    const formData = new FormData(contactForm);
+    fetch('ajax/contact-form.php',{method: 'POST', body: formData}).then();
+});
