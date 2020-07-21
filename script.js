@@ -58,3 +58,7 @@ contactForm.addEventListener('submit',(e)=>{
     const formData = new FormData(contactForm);
     fetch('ajax/contact-form.php',{method: 'POST', body: formData}).then();
 });
+
+//PREVENT SCROLL TO FOCUS INPUT__________________________________________
+const nameInput = document.getElementsByName('name')[0];
+nameInput.focus({preventScroll: true});
