@@ -55,6 +55,16 @@ $colors : (//colors table
 	@include color('red');
 }
 
+//SHADOW_______________________________________
+@mixin shadow(){
+	transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+	box-shadow: 0 3px 6px rgba(0,0,0,0.15);
+
+	&:hover{
+		box-shadow: 0 3px 6px rgba(0,0,0,0.15), 0 3px 6px rgba(0,0,0,0.23);
+	}
+}
+
 //GENERAL______________________________________
 body{//default: IBM Bold, white color, cream background
 	font-family: 'IBM-Bold', sans-serif;
@@ -83,6 +93,10 @@ button{//button reset and z-position
 	color: inherit;
 	position: relative;
 	z-index: 2;
+
+	&:focus{
+		outline: none;
+	}
 }
 
 ul{//list reset
@@ -100,7 +114,7 @@ ul{//list reset
 	pointer-events: none;
 }
 
-.clickable{//clickable element in transparent elemenT
+.clickable{//clickable element in transparent element
 	pointer-events: auto;
 }
 
@@ -116,10 +130,10 @@ ul{//list reset
 	&-close{//menu close button
 		@include background('white');
 		border-radius: 100%;
-		box-shadow: 0 3px 6px rgba(0,0,0,0.15);
 		cursor: pointer;
 		width: 4vw;
 		height: 4vw;
+		@include shadow();
 
 		svg{//menu close icon
 			width: 2vw;
@@ -130,16 +144,25 @@ ul{//list reset
 		margin: 3vh;
 	}
 
-	a:hover{//menu nav items
-		@include color('blue');
+	a{
+		transition: all 0.3s cubic-bezier(.25,.8,.25,1);
 
 		&::after{//menu nav item underline
 			content: "";
 			display: block;
-			width: 8.75rem;
+			width: 0;
 			height: 0.15rem;
 			@include background('red');
 			margin-bottom: -0.15rem;
+			transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+		}
+
+		&:hover{//menu nav items
+			@include color('blue');
+	
+			&::after{
+				width: 8.75rem;
+			}
 		}
 	}
 
@@ -166,10 +189,10 @@ ul{//list reset
 	&-menu-btn{//top bar menu
 		@include background('white');
 		border-radius: 100%;
-		box-shadow: 0 3px 6px rgba(0,0,0,0.15);
 		cursor: pointer;
 		width: 4vw;
 		height: 4vw;
+		@include shadow();
 
 		svg{//top bar menu icon
 			width: 2vw;
@@ -287,11 +310,17 @@ ul{//list reset
 
 	a{//about contact button
 		display: block;
+		@include color('aqua');
 		@include size(20);
 		letter-spacing: 0.3rem;
-		border: 0.125rem solid map-get($colors,'red');
+		border: 0.125rem solid map-get($colors,'aqua');
 		border-radius: 3rem;
-		box-shadow: 0 3px 6px rgba(0,0,0,0.15);
+		@include shadow();
+
+		&:hover{
+			@include color('white');
+			@include background('light-aqua');
+		}
 	}
 
 	//about background
@@ -388,8 +417,12 @@ ul{//list reset
 
 		>div{//project carousel controls
 
-			a:hover{
-				@include color('red');
+			a{
+				transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+
+				&:hover{
+					@include color('red');
+				}
 			}
 
 			&:first-of-type{
@@ -404,6 +437,7 @@ ul{//list reset
 		img{//project carousel image
 			width: 100%;
 			height: auto;
+			@include shadow();
 		}
 
 		&-coin{//project carousel coin
@@ -434,14 +468,21 @@ ul{//list reset
 		}
 	}
 
-	&-link::before{//project link decoration line
-		content: "";
-		display: inline-block;
-		width: 5rem;
-		height: 0.15rem;
-		margin-right: 1rem;
-		margin-bottom: 0.4rem;
-		@include background('red');
+	&-link{
+
+		&:hover{
+			@include color('red');
+		}
+
+		&::before{//project link decoration line
+			content: "";
+			display: inline-block;
+			width: 5rem;
+			height: 0.15rem;
+			margin-right: 1rem;
+			margin-bottom: 0.4rem;
+			@include background('red');
+		}
 	}
 
 	//project background
@@ -477,23 +518,28 @@ ul{//list reset
 	form{//contact form
 		position: relative;
 		z-index: 2;
+		@include size(22);
+		font-family: 'IBM-Regular', sans-serif;
 
 		span{//contact red star
 			margin-left: -0.8rem;
 		}
 
+		label{//label
+			margin-bottom: 0;
+		}
+
 		input{//contact input
 			background: none;
 			flex-grow: 1;
+			margin-left: 1rem;
+			border: none;
+			@include color('white');
+			caret-color: red;
 		}
 
 		.deco{//contact input underline
 			border-bottom: 3px solid map-get($colors,'light-aqua');
-		}
-
-		label{//contact label
-			@include size(22);
-			font-family: 'IBM-Regular', sans-serif;
 		}
 
 		label[for=name], input[name=name]{//contact name
@@ -502,12 +548,13 @@ ul{//list reset
 		}
 
 		button{//contact submit
+			font-family: 'IBM-Bold', sans-serif;
 			@include size(20);
 			@include background('light-aqua');
 			letter-spacing: 0.3rem;
 			border: none;
 			border-radius: 3rem;
-			box-shadow: 0 3px 6px rgba(0,0,0,0.15);
+			@include shadow();
 		}
 	}
 
@@ -530,6 +577,10 @@ ul{//list reset
 				font-family: 'IBM-Medium', sans-serif;
 				margin-bottom: 0;
 
+				a:hover{
+					@include color('white');
+				}
+
 				&::before{
 					content: url('../media/contact-mail.svg');
 					display: inline-block;
@@ -542,6 +593,10 @@ ul{//list reset
 		&-legal{//contact bottom legal mention
 			padding-right: 5vw;
 			margin-bottom: 1vh;
+
+			&:hover{
+				@include color('white');
+			}
 		}
 	}
 
@@ -579,7 +634,7 @@ ul{//list reset
 		letter-spacing: 0.3rem;
 		border: 0.125rem solid map-get($colors,'red');
 		border-radius: 3rem;
-		box-shadow: 0 3px 6px rgba(0,0,0,0.15);
+		@include shadow();
 	}
 }
 
