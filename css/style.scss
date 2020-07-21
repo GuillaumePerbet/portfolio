@@ -635,6 +635,10 @@ ul{//list reset
 		border: 0.125rem solid map-get($colors,'red');
 		border-radius: 3rem;
 		@include shadow();
+
+		&:hover{
+			@include color('red');
+		}
 	}
 }
 
@@ -660,7 +664,7 @@ ul{//list reset
 	}
 }
 
-//PROJECT DESCRITPTION________________________________
+//PROJECT DESCRIPTION________________________________
 #project-description{
 	@include color('blue');
 	@include size(18);
@@ -684,13 +688,29 @@ ul{//list reset
 		line-height: 2.5rem;
 	}
 
-	a{
-		@include color('red');
+	&-link{//project description link
+		
+		a{
+			@include color('red');
+			display: inline-block;
 
-		&:hover{
-			text-decoration: underline;
+			&::after{//project descrption link decoration
+				content: "";
+				display: block;
+				width: 100%;
+				height: 0.15rem;
+				@include background('red');
+				margin-top: -0.15rem;
+				transform: scaleX(0);
+				transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+			}
+
+			&:hover::after{
+				transform: scaleX(1);
+			}
 		}
 	}
+	
 }
 
 //PROJECT IMAGE________________________________
