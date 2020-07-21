@@ -201,22 +201,62 @@ ul{//list reset
 }
 
 //HOME_____________________________________________
+@mixin float-animation($r1,$r2,$r3,$r4,$r5,$r6,$r7,$r8,$r9,$r10,$r11,$r12){
+	
+
+	animation: 10s alternate infinite ease-in-out float;
+}
+
+
+
 #home{
 	@include background('blue');
 
 	h1{//home title
 		@include size(144);
 
-		>span:last-of-type{//home deco title
-			&::before, &::after{
-				content: '';
-				display: block;
-				width: 7.427rem;
-				height: 7rem;
-				background-image: url("../media/home-title-deco.svg");
-				background-size: cover;
+		>span{
+			
+			@for $i from 1 through 15{//home title letters
+				#letter-#{$i}{
+					@keyframes float-#{$i}{
+						0%{
+							transform: translate(0,0);
+						}
+						20%{
+							transform: translate(random(30) - 15 + px, random(30) - 15 + px);
+						}
+						40%{
+							transform: translate(random(30) - 15 + px, random(30) - 15 + px);
+						}
+						60%{
+							transform: translate(random(30) - 15 + px, random(30) - 15 + px);
+						}
+						80%{
+							transform: translate(random(30) - 15 + px, random(30) - 15 + px);
+						}
+						100%{
+							transform: translate(random(30) - 15 + px, random(30) - 15 + px);
+						}
+					}
+
+					animation: float-#{$i} 6s $i/10+s alternate infinite linear;
+				}
+			}
+
+			&:last-of-type{//home deco title
+				&::before, &::after{
+					content: '';
+					display: block;
+					width: 7.427rem;
+					height: 7rem;
+					background-image: url("../media/home-title-deco.svg");
+					background-size: cover;
+				}
 			}
 		}
+		
+		
 	}
 
 	h2{//home subtitle
