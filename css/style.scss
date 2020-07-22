@@ -485,7 +485,7 @@ ul{//list reset
 			@include shadow();
 		}
 
-		&-coin{//project carousel coin
+		&-coin-xl{//project carousel coin
 			position: absolute;
 			left: -2.5rem;
 			top: 1rem;
@@ -565,6 +565,11 @@ ul{//list reset
 		border: 2px solid map-get($colors,'light-aqua');
 		border-radius: 1rem;
 		margin: 5vh 3vw;
+
+		@media (max-width: 575.98px) {
+			border: none;
+			margin: 0;
+		}
 	}
 
 	form{//contact form
@@ -607,7 +612,7 @@ ul{//list reset
 			font-family: 'IBM-Bold', sans-serif;
 			@include size(20);
 			@include background('light-aqua');
-			border: 0.125rem solid map-get($colors,'aqua');
+			border: 0.125rem solid map-get($colors,'white');
 			letter-spacing: 0.3rem;
 			border-radius: 3rem;
 			@include shadow();
@@ -615,12 +620,13 @@ ul{//list reset
 			&:hover{
 				@include color('aqua');
 				@include background('white');
+				border-color: map-get($colors,'aqua');
 				letter-spacing: 0.4rem;
 			}
 		}
 	}
 
-	&-bottom{//contact bottom bar
+	&-bottom-xl{//contact bottom bar XL
 		bottom: 0;
 		text-decoration: underline;
 
@@ -653,8 +659,34 @@ ul{//list reset
 		}
 
 		&-legal{//contact bottom legal mention
+			font-family: 'IBM-Regular', sans-serif;
 			padding-right: 5vw;
 			margin-bottom: 1vh;
+			opacity: 0.6;
+
+			&:hover{
+				@include color('white');
+			}
+		}
+	}
+
+	&-bottom-xs{//contact bottom bar XS
+		text-decoration: underline;
+
+		address{
+			@include size(22);
+			font-family: 'IBM-Medium', sans-serif;
+
+			a:hover{
+				@include color('white');
+			}
+		}
+
+		&-legal{//contact bottom legal mention
+			font-family: 'IBM-Regular', sans-serif;
+			padding-right: 5vw;
+			margin-bottom: 1vh;
+			opacity: 0.6;
 
 			&:hover{
 				@include color('white');
