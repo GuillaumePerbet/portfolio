@@ -231,28 +231,32 @@ ul{//list reset
 		@include size(144);
 		@include color('red');
 
-		>span{
+		@media (max-width: 575.98px) {
+			@include size(40);
+		}
+
+		>span{//home title letters
 			
-			@for $i from 1 through 15{//home title letters
+			@for $i from 1 through 15{//home title letters animation
 				#letter-#{$i}{
 					@keyframes float-#{$i}{
 						0%{
 							transform: translate(0,0);
 						}
 						20%{
-							transform: translate(random(30) - 15 + px, random(30) - 15 + px);
+							transform: translate(random(200) / 100 - 1 + vw, random(200) / 100 - 1 + vw);
 						}
 						40%{
-							transform: translate(random(30) - 15 + px, random(30) - 15 + px);
+							transform: translate(random(200) / 100 - 1 + vw, random(200) / 100 - 1 + vw);
 						}
 						60%{
-							transform: translate(random(30) - 15 + px, random(30) - 15 + px);
+							transform: translate(random(200) / 100 - 1 + vw, random(200) / 100 - 1 + vw);
 						}
 						80%{
-							transform: translate(random(30) - 15 + px, random(30) - 15 + px);
+							transform: translate(random(200) / 100 - 1 + vw, random(200) / 100 - 1 + vw);
 						}
 						100%{
-							transform: translate(random(30) - 15 + px, random(30) - 15 + px);
+							transform: translate(random(200) / 100 - 1 + vw, random(200) / 100 - 1 + vw);
 						}
 					}
 
@@ -260,7 +264,7 @@ ul{//list reset
 				}
 			}
 
-			&:last-of-type{//home deco title
+			&:last-of-type{//home title comet decoration
 				&::before, &::after{
 					content: '';
 					display: block;
@@ -268,6 +272,11 @@ ul{//list reset
 					height: 7rem;
 					background-image: url("../media/home-title-deco.svg");
 					background-size: cover;
+
+					@media (max-width: 575.98px) {
+						height: 1.7rem;
+						width: 1.7rem;
+					}
 				}
 			}
 		}
@@ -281,6 +290,11 @@ ul{//list reset
 		position: relative;
 		top: 2rem;
 
+		@media (max-width: 575.98px) {
+			@include size(14);
+			top: 0;
+		}
+
 		&::before{//home subtitle line
 			content: "";
 			display: block;
@@ -290,6 +304,11 @@ ul{//list reset
 			margin-top: 1.5rem;
 			margin-right: 2rem;
 			@include background('red');
+
+			@media (max-width: 575.98px) {
+				width: 17vw;
+				margin: 0.4rem 0.75rem 0;
+			}
 		}
 	}
 
@@ -298,12 +317,22 @@ ul{//list reset
 		width: 8vw;
 		top: 0;
 		right: 35vw;
+
+		@media (max-width: 575.98px) {
+			width: 21vw;
+			right: 21vw;
+		}
 	}
 
 	&-drone{
 		width: 7vw;
 		bottom: 0;
 		left: 1.5vw;
+
+		@media (max-width: 575.98px) {
+			width: 21vw;
+			left: 5vw;
+		}
 	}
 
 	&-plant{
@@ -316,17 +345,37 @@ ul{//list reset
 		width: 8vw;
 		bottom: 0;
 		right: 4vw;
+
+		@media (max-width: 575.98px) {
+			width: 24vw;
+			right: 5vw;
+		}
 	}
 
 	&-feather{
 		width: 7vw;
 		bottom: 28vh;
 		right: 0;
+
+		@media (max-width: 575.98px) {
+			width: 23vw;
+			bottom: 17vh;
+		}
 	}
 
-	&-stars{
+	&-stars-xl{
 		width: 100vw;
-		z-index: 0;
+	}
+
+	&-stars-top-xs{
+		width: 100vw;
+		top: 0;
+	}
+
+	&-stars-bottom-xs{
+		width: 45vw;
+		bottom: 5vh;
+		left: 5vw;
 	}
 }
 
