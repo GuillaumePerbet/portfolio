@@ -107,7 +107,7 @@ ul{//list reset
 .icon{//svg background icon
 	height: auto;
 	position: absolute;
-	z-index: 1;
+	z-index: 0;
 }
 
 .transparent{//clic under transparent div
@@ -127,6 +127,10 @@ ul{//list reset
 	@include background('light-aqua');
 	@include size(60);
 
+	@media (max-width: 575.98px) {
+		@include size(40);
+	}
+	
 	&-close{//menu close button
 		@include background('white');
 		border-radius: 100%;
@@ -135,8 +139,17 @@ ul{//list reset
 		height: 4vw;
 		@include shadow();
 
+		@media (max-width: 575.98px) {
+			width: 11vw;
+			height: 11vw;
+		}
+
 		svg{//menu close icon
 			width: 2vw;
+
+			@media (max-width: 575.98px) {
+				width: 9vw;
+			}
 		}
 	}
 
@@ -181,6 +194,10 @@ ul{//list reset
 	&-logo{//top bar logo
 		height: 4vw;
 		width: auto;
+
+		@media (max-width: 575.98px) {
+			height: 11vw;
+		}
 	}
 
 	&-menu-btn{//top bar menu
@@ -191,8 +208,17 @@ ul{//list reset
 		height: 4vw;
 		@include shadow();
 
+		@media (max-width: 575.98px) {
+			width: 11vw;
+			height: 11vw;
+		}
+
 		svg{//top bar menu icon
 			width: 2vw;
+
+			@media (max-width: 575.98px) {
+				width: 9vw;
+			}
 		}
 	}
 }
