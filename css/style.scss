@@ -404,39 +404,54 @@ ul{//list reset
 
 	&-galaxy{//skill galaxy
 
+		@keyframes rotate{
+			from{
+				transform: translate(50%,-50%) rotate(0);
+			}
+			to{
+				transform: translate(50%,-50%) rotate(360deg);
+			}
+		}
+
 		svg{
 			position: absolute;
 			top: 50%;
 			right: 25%;
-			transform: translate(50%,-50%);
 		}
 		
 		&-planet{
 			height: 10%;
+			transform: translate(50%,-50%);
 		}
 	
 		&-stars-1{
 			height: 23%;
+			animation: rotate 25s infinite linear;
 		}
 	
 		&-circle-1{
 			height: 32%;
+			animation: rotate 25s infinite linear;
 		}
 	
 		&-circle-2{
 			height: 45%;
+			animation: rotate 25s infinite linear reverse;
 		}
 	
 		&-stars-2{
 			height: 60%;
+			animation: rotate 35s infinite linear;
 		}
 	
 		&-circle-3{
 			height: 65%;
+			animation: rotate 45s infinite linear;
 		}
 	
 		&-stars-3{
 			height: 77%;
+			animation: rotate 55s infinite linear reverse;
 		}
 	}
 
