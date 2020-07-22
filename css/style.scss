@@ -385,32 +385,64 @@ ul{//list reset
 	h2{//about title
 		@include color('blue');
 		@include size(62);
-	}
 
-	p{//about status and button
-		@include size(22);
+		@media (max-width: 575.98px) {
+			@include size(30);
+		}
 	}
 
 	&-status{//about status
 		font-family: 'IBM-Medium', sans-serif;
 		@include color('red');
+		@include size(22);
 		
 		strong{
 			text-decoration: underline;
 			font-weight: normal;
 		}
+
+		@media (max-width: 575.98px) {
+			@include size(16);
+		}
 	}
 
 	&-portrait{//about portrait and deco
 		position: relative;
-		z-index: 2;
+		z-index: 1;
+
+		@media (max-width: 575.98px) {
+			img{
+				width: 35vw;
+				height: 35vw;
+			}
+		}
 
 		&::before{
-			content: url('../media/about-left-deco.svg');
+			content: '';
+			background-image: url('../media/about-left-deco.svg');
+			flex-shrink: 0;
+			background-size: cover;
+			width: 10rem;
+			height: 10rem;
+
+			@media (max-width: 575.98px) {
+				width: 20vw;
+				height: 20vw;
+			}
 		}
 
 		&::after{
-			content: url('../media/about-right-deco.svg');
+			content: '';
+			background-image: url('../media/about-right-deco.svg');
+			flex-shrink: 0;
+			background-size: cover;
+			width: 10rem;
+			height: 10rem;
+
+			@media (max-width: 575.98px) {
+				width: 20vw;
+				height: 20vw;
+			}
 		}
 	}
 
@@ -431,10 +463,22 @@ ul{//list reset
 	}
 
 	//about background
-	&-bck{
+	&-bck-xl{
 		width: 100vw;
 		top: -10vh;
 		left: 2vw;
+	}
+
+	&-planet{
+		width: 85vw;
+		bottom: 5vh;
+		right: -25vw;
+	}
+
+	&-diamond{
+		width: 70vw;
+		top: 5vh;
+		left: -30vw;
 	}
 }
 
