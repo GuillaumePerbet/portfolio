@@ -446,9 +446,10 @@ ul{//list reset
 		}
 	}
 
-	a{//about contact button
+	a{//about buttons
 		display: block;
 		@include color('aqua');
+		@include background('white');
 		@include size(20);
 		letter-spacing: 0.3rem;
 		border: 0.125rem solid map-get($colors,'aqua');
@@ -488,29 +489,75 @@ ul{//list reset
 
 	h2{//skill title
 		@include size(58);
+
+		@media (max-width: 575.98px) {
+			@include size(28);
+			text-align: center;
+			margin: 1rem 0;
+		}
 	}
 
 	p{//skill text
 		font-family: 'IBM-Medium', sans-serif;
 		@include size(17);
 		max-width: 14rem;
+
+		@media (max-width: 575.98px) {
+			@include size(14);
+		}
 	}
 
 	//skill decoration
 	&-bdd::before{
-		content: url('../media/skill-bdd-deco.svg');
+		content: '';
+		background-image: url('../media/skill-bdd-deco.svg');
+		background-size: cover;
+		width: 9.625rem;
+		height: 8.25rem;
+
+		@media (max-width: 575.98px) {
+			width: 22vw;
+			height: 21vw;
+		}
 	}
 
 	&-dynamic::before{
-		content: url('../media/skill-dynamic-deco.svg');
+		content: '';
+		background-image: url('../media/skill-dynamic-deco.svg');
+		background-size: cover;
+		width: 8.3rem;
+		height: 7.8rem;
+
+		@media (max-width: 575.98px) {
+			width: 21.3vw;
+			height: 20.1vw;
+		}
 	}
 
 	&-integration::before{
-		content: url('../media/skill-integration-deco.svg');
+		content: '';
+		background-image: url('../media/skill-integration-deco.svg');
+		background-size: cover;
+		width: 11.125rem;
+		height: 9.5rem;
+
+		@media (max-width: 575.98px) {
+			width: 28.4vw;
+			height: 24.3vw;
+		}
 	}
 
 	&-secure::before{
-		content: url('../media/skill-secure-deco.svg');
+		content: '';
+		background-image: url('../media/skill-secure-deco.svg');
+		background-size: cover;
+		width: 11.125rem;
+		height: 9.5rem;
+
+		@media (max-width: 575.98px) {
+			width: 27.2vw;
+			height: 25.5vw;
+		}
 	}
 
 	&-galaxy{//skill galaxy
@@ -571,6 +618,12 @@ ul{//list reset
 		width: 45vw;
 		bottom: 0;
 		left: -3vw;
+		
+		@media (max-width: 575.98px) {
+			width: 130vw;
+			left: -20vw;
+			bottom: -5vh;
+		}
 	}
 }
 
