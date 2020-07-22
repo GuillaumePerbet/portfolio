@@ -198,14 +198,6 @@ ul{//list reset
 }
 
 //HOME_____________________________________________
-@mixin float-animation($r1,$r2,$r3,$r4,$r5,$r6,$r7,$r8,$r9,$r10,$r11,$r12){
-	
-
-	animation: 10s alternate infinite ease-in-out float;
-}
-
-
-
 #home{
 	@include background('blue');
 
@@ -426,32 +418,32 @@ ul{//list reset
 	
 		&-stars-1{
 			height: 23%;
-			animation: rotate 25s infinite linear;
+			animation: rotate 50s infinite linear;
 		}
 	
 		&-circle-1{
 			height: 32%;
-			animation: rotate 25s infinite linear;
+			animation: rotate 50s infinite linear;
 		}
 	
 		&-circle-2{
 			height: 45%;
-			animation: rotate 25s infinite linear reverse;
+			animation: rotate 50s infinite linear reverse;
 		}
 	
 		&-stars-2{
 			height: 60%;
-			animation: rotate 35s infinite linear;
+			animation: rotate 60s infinite linear;
 		}
 	
 		&-circle-3{
 			height: 65%;
-			animation: rotate 45s infinite linear;
+			animation: rotate 70s infinite linear;
 		}
 	
 		&-stars-3{
 			height: 77%;
-			animation: rotate 55s infinite linear reverse;
+			animation: rotate 80s infinite linear reverse;
 		}
 	}
 
@@ -750,7 +742,7 @@ ul{//list reset
 			display: block;
 			width: 0.125rem;
 			height: 5rem;
-			margin: 3rem auto;
+			margin: 1rem auto;
 			@include background('red');
 		}
 	}
@@ -758,7 +750,7 @@ ul{//list reset
 	&-text{//project description text
 		font-family: 'IBM-Regular', sans-serif;
 		@include size(22);
-		line-height: 2.5rem;
+		line-height: 2.8rem;
 
 		strong{
 			font-weight: bold;
