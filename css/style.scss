@@ -217,6 +217,10 @@ ul{//list reset
 		height: 4vw;
 		width: auto;
 
+		@media (max-width: 1199.98px){
+			height: 5rem;
+		}
+
 		@media (max-width: 575.98px) {
 			height: auto;
 			width: 3.125rem;
@@ -231,6 +235,11 @@ ul{//list reset
 		height: 4vw;
 		@include shadow();
 
+		@media (max-width: 1199.98px){
+			height: 5rem;
+			width: 5rem;
+		}
+
 		@media (max-width: 575.98px) {
 			width: 2.3rem;
 			height: 2.3rem;
@@ -239,9 +248,13 @@ ul{//list reset
 		svg{//top bar menu icon
 			width: 2vw;
 
+			@media (max-width: 1199.98px){
+				height: auto;
+				width: 2.4rem;
+			}
+
 			@media (max-width: 575.98px) {
 				width: 1.3rem;
-				height: auto;
 			}
 		}
 	}
@@ -255,7 +268,7 @@ ul{//list reset
 		@include size(144);
 		@include color('red');
 
-		@media (max-width: 767.98px){
+		@media (max-width: 1199.98px){
 			@include size(96);
 		}
 
@@ -301,7 +314,7 @@ ul{//list reset
 					background-image: url("../media/home-title-deco.svg");
 					background-size: cover;
 
-					@media (max-width: 767.98px){
+					@media (max-width: 1199.98px){
 						height: 4rem;
 						width: 4.1rem;
 					}
