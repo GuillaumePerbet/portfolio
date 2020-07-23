@@ -811,8 +811,12 @@ ul{//list reset
 		@include size(22);
 		font-family: 'IBM-Regular', sans-serif;
 
+		@media (max-width: 575.98px) {
+			@include size(16);
+		}
+
 		span{//contact red star
-			margin-left: -0.8rem;
+			margin-left: -0.5rem;
 		}
 
 		label{//label
@@ -839,6 +843,18 @@ ul{//list reset
 		label[for=name], input[name=name]{//contact name
 			@include size(46);
 			font-family: 'IBM-Bold', sans-serif;
+
+			@media (max-width: 575.98px) {
+				@include size(24);
+			}
+		}
+
+		input[name=name]{
+			margin-left: -6rem;
+
+			@media (max-width: 575.98px) {
+				margin-left: 0;
+			}
 		}
 
 		button{//contact submit
@@ -849,6 +865,10 @@ ul{//list reset
 			letter-spacing: 0.3rem;
 			border-radius: 3rem;
 			@include shadow();
+
+			@media (max-width: 575.98px) {
+				@include size(18);
+			}
 			
 			&:hover{
 				@include color('aqua');
@@ -904,11 +924,12 @@ ul{//list reset
 	}
 
 	&-bottom-xs{//contact bottom bar XS
-		text-decoration: underline;
+		
 
 		address{
 			@include size(22);
 			font-family: 'IBM-Medium', sans-serif;
+			text-decoration: underline;
 
 			a:hover{
 				@include color('white');
@@ -920,6 +941,7 @@ ul{//list reset
 			padding-right: 5vw;
 			margin-bottom: 1vh;
 			opacity: 0.6;
+			text-decoration: underline;
 
 			&:hover{
 				@include color('white');
