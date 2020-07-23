@@ -143,6 +143,11 @@ ul{//list reset
 		height: 4vw;
 		@include shadow();
 
+		@media (max-width: 1199.98px){
+			height: 5rem;
+			width: 5rem;
+		}
+
 		@media (max-width: 575.98px) {
 			width: 2.3rem;
 			height: 2.3rem;
@@ -150,6 +155,11 @@ ul{//list reset
 
 		svg{//menu close icon
 			width: 2vw;
+
+			@media (max-width: 1199.98px){
+				height: auto;
+				width: 2.4rem;
+			}
 
 			@media (max-width: 575.98px) {
 				width: 1rem;
