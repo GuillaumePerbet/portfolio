@@ -993,6 +993,7 @@ ul{//list reset
 
 		@media (max-width: 575.98px) {
 			@include size(17);
+			max-width: 12rem;
 		}
 
 		&:hover{
@@ -1006,6 +1007,11 @@ ul{//list reset
 #project-home{
 	overflow: visible;
 
+	@media (max-width: 575.98px) {
+		min-height: 0;
+		margin-bottom: 3rem;
+	}
+
 	&-image{//project home image
 		position: relative;
 		z-index: 2;
@@ -1014,6 +1020,12 @@ ul{//list reset
 		img{
 			max-height: 80vh;
 			width: auto;
+
+			@media (max-width: 575.98px) {
+				width: 100%;
+				height: auto;
+				max-height: none;
+			}
 		}
 	}
 
@@ -1021,6 +1033,12 @@ ul{//list reset
 		width: 100vw;
 		right: 0vw;
 		top: -40vh;
+
+		@media (max-width: 575.98px) {
+			width: 200vw;
+			top: -30vh;
+			right: -30vw;
+		}
 	}
 }
 
