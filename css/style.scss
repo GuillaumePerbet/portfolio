@@ -255,6 +255,10 @@ ul{//list reset
 		@include size(144);
 		@include color('red');
 
+		@media (max-width: 767.98px){
+			@include size(96);
+		}
+
 		@media (max-width: 575.98px) {
 			@include size(40);
 		}
@@ -296,6 +300,11 @@ ul{//list reset
 					height: 7rem;
 					background-image: url("../media/home-title-deco.svg");
 					background-size: cover;
+
+					@media (max-width: 767.98px){
+						height: 4rem;
+						width: 4.1rem;
+					}
 
 					@media (max-width: 575.98px) {
 						height: 1.7rem;
@@ -342,6 +351,10 @@ ul{//list reset
 		top: 0;
 		right: 35vw;
 
+		@media (max-width: 1199.98px){
+			width: 12vw;
+		}
+
 		@media (max-width: 575.98px) {
 			width: 21vw;
 			right: 21vw;
@@ -357,6 +370,10 @@ ul{//list reset
 		width: 7vw;
 		bottom: 0;
 		left: 1.5vw;
+
+		@media (max-width: 1199.98px){
+			width: 12vw;
+		}
 
 		@media (max-width: 575.98px) {
 			width: 21vw;
