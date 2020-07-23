@@ -592,10 +592,14 @@ ul{//list reset
 	h2{//skill title
 		@include size(58);
 
-		@media (max-width: 575.98px) {
-			@include size(29);
+		@media (max-width: 1199.98px){
+			@include size(50);
 			text-align: center;
 			margin: 1rem 0;
+		}
+
+		@media (max-width: 575.98px) {
+			@include size(29);
 		}
 	}
 
@@ -693,8 +697,8 @@ ul{//list reset
 		width: 45vw;
 		bottom: 0;
 		left: -3vw;
-		
-		@media (max-width: 575.98px) {
+
+		@media (max-width: 1199.98px){
 			width: 130vw;
 			left: -20vw;
 			bottom: -5vh;
