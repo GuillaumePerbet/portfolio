@@ -720,7 +720,7 @@ ul{//list reset
 		&-prev, &-next{//project carousel controls
 			writing-mode: vertical-rl;
 
-			@media (max-width: 575.98px) {
+			@media (max-width: 1199.98px) {
 				writing-mode: horizontal-tb;
 			}
 
@@ -737,7 +737,7 @@ ul{//list reset
 			transform: rotate(180deg);
 			z-index: 2;
 
-			@media (max-width: 575.98px) {
+			@media (max-width: 1199.98px) {
 				transform: rotate(0);
 			}
 		}
@@ -760,6 +760,10 @@ ul{//list reset
 			z-index: 3;
 			@include size(26);
 		}
+
+		@media (max-width: 1199.98px) {
+			margin-bottom: 6rem;
+		}
 	}
 
 	&-title{//project title
@@ -778,6 +782,10 @@ ul{//list reset
 			bottom: 105%;
 			background-image: url("../media/project-title-deco.svg");
 
+			@media (max-width: 1199.98px) {
+				right: 39%;
+			}
+
 			@media (max-width: 575.98px) {
 				display: none;
 			}
@@ -785,10 +793,14 @@ ul{//list reset
 	}
 
 	&-date{
+
+		@media (max-width: 1199.98px) {
+			@include size(18);
+			margin-bottom: 1.5rem;
+		}
 		
 		@media (max-width: 575.98px) {
 			@include size(14);
-			margin-bottom: 1.5rem;
 		}
 	}
 
@@ -831,7 +843,7 @@ ul{//list reset
 		top: -34vh;
 		right: -5vw;
 
-		@media (max-width: 575.98px) {
+		@media (max-width: 1199.98px) {
 			width: 250vw;
 			top: -25vh;
 			right: -50vw;
@@ -842,6 +854,11 @@ ul{//list reset
 		width: 7vw;
 		bottom: 33vh;
 		left: 0;
+
+		@media (max-width: 1199.98px) {
+			width: 12vw;
+			bottom: 28vh;
+		}
 
 		@media (max-width: 575.98px) {
 			width: 20vw;
@@ -854,9 +871,13 @@ ul{//list reset
 		top: 0;
 		right: 2vw;
 
+		@media (max-width: 1199.98px) {
+			width: 12vw;
+			right: 20vw;
+		}
+
 		@media (max-width: 575.98px) {
 			width: 16vw;
-			right: 20vw;
 		}
 	}
 }
