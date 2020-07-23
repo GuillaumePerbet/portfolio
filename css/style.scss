@@ -466,6 +466,8 @@ ul{//list reset
 	h2{//about title
 		@include color('blue');
 		@include size(62);
+		position: relative;
+		z-index: 1;
 
 		@media (max-width: 575.98px) {
 			@include size(30);
@@ -476,6 +478,8 @@ ul{//list reset
 		font-family: 'IBM-Medium', sans-serif;
 		@include color('red');
 		@include size(22);
+		position: relative;
+		z-index: 1;
 		
 		strong{
 			text-decoration: underline;
