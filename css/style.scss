@@ -55,6 +55,10 @@ $colors : (//colors table
 	@include color('red');
 }
 
+.regular{
+	font-family: 'IBM-Regular', sans-serif;
+}
+
 //SHADOW_______________________________________
 @mixin shadow(){
 	transition: all 0.5s cubic-bezier(.25,.8,.25,1);
@@ -715,6 +719,7 @@ ul{//list reset
 	}
 
 	&-date{
+		
 		@media (max-width: 575.98px) {
 			@include size(14);
 			margin-bottom: 1.5rem;
@@ -861,7 +866,7 @@ ul{//list reset
 			font-family: 'IBM-Bold', sans-serif;
 			@include size(20);
 			@include background('light-aqua');
-			border: 0.125rem solid map-get($colors,'white');
+			border: 0.125rem solid rgba(255,255,255,0.6);
 			letter-spacing: 0.3rem;
 			border-radius: 3rem;
 			@include shadow();
@@ -1008,8 +1013,8 @@ ul{//list reset
 	overflow: visible;
 
 	@media (max-width: 575.98px) {
+		overflow: hidden;
 		min-height: 0;
-		margin-bottom: 3rem;
 	}
 
 	&-image{//project home image
@@ -1022,7 +1027,7 @@ ul{//list reset
 			width: auto;
 
 			@media (max-width: 575.98px) {
-				width: 100%;
+				width: 75vw;
 				height: auto;
 				max-height: none;
 			}
@@ -1036,7 +1041,7 @@ ul{//list reset
 
 		@media (max-width: 575.98px) {
 			width: 200vw;
-			top: -30vh;
+			top: -20vh;
 			right: -30vw;
 		}
 	}
@@ -1046,6 +1051,10 @@ ul{//list reset
 #project-description{
 	@include color('blue');
 	@include size(18);
+
+	@media (max-width: 575.98px) {
+		@include size(15);
+	}
 
 	>div{
 		min-height: 100vh;
@@ -1057,6 +1066,10 @@ ul{//list reset
 			height: 5rem;
 			margin: 1rem auto;
 			@include background('red');
+
+			@media (max-width: 575.98px) {
+				height: 3.75rem;
+			}
 		}
 	}
 
@@ -1064,6 +1077,11 @@ ul{//list reset
 		font-family: 'IBM-Regular', sans-serif;
 		@include size(22);
 		line-height: 2.8rem;
+
+		@media (max-width: 575.98px) {
+			@include size(15);
+			line-height: 1.6rem;
+		}
 
 		strong{
 			font-weight: bold;
@@ -1098,4 +1116,11 @@ ul{//list reset
 	background-image: url('../media/hiking-image.png');
 	background-size: auto 100%;
 	background-position: center;
+
+	@media (max-width: 575.98px) and (orientation:portrait) {
+		min-height: 80vw;
+		width: 100vw;
+		background-size: cover;
+		background-repeat: no-repeat;
+	}
 }

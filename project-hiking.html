@@ -21,7 +21,7 @@
             </div>
 
             <!-- top bar menu button -->
-            <div class="col-3 col-sm-3 col-xl-1 offset-2 offset-sm-2 offset-xl-10 d-flex align-items-center justify-content-center">
+            <div class="col-3 col-sm-3 col-xl-1 offset-2 offset-sm-2 offset-xl-9 d-flex align-items-center justify-content-center">
                 <button id="top-bar-menu-btn" class="clickable d-flex justify-content-center align-items-center">
                     <svg xmlns="http://www.w3.org/2000/svg" width="38" height="26" viewBox="0 0 38 26"><g transform="translate(-1753 -130)"><rect width="38" height="3.175" rx="2.5" transform="translate(1753 130)" fill="#eb1e4d"/><rect width="38" height="3.175" rx="2.5" transform="translate(1753 140)" fill="#eb1e4d"/><rect width="38" height="3.175" rx="2.5" transform="translate(1753 151)" fill="#eb1e4d"/></g></svg>
                 </button>
@@ -72,7 +72,6 @@
             </div>
         </div>
 
-        
         <!-- home background icons -->
         <svg id="project-home-plant" class="icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="2353.054" height="1904.614" viewBox="0 0 2353.054 1904.614"><defs><clipPath id="project-home-path"><path d="M618.335,686.252,198.5,331.92,604.8,1314.428,0,804,431.027,1846.281h803.955l-220.736-186.3L1421.09,676.142,1052.5,987.23,1421.09,95.882l-405.86,342.54L248.12-209ZM379.023-26.149,972.365,474.6,686.036,716.249ZM712.832,766l577.355-487.271L991.436,1001.147ZM329.417,514.761,970.86,1056.124,661.316,1317.369Zm348.257,861.165,612.512-516.933L973.25,1625.379ZM130.92,986.847l948.405,800.415h-617.4Z" transform="translate(0 209)" fill="#8fc4c3" clip-rule="evenodd"/></clipPath><clipPath id="project-home-path-2"><path d="M-774,37648.359H8356.5V-3973H-774Z" transform="translate(774 3972.998)" fill="#8fc4c3"/></clipPath></defs><g transform="matrix(-0.259, -0.966, 0.966, -0.259, 569.684, 1850.521)" opacity="0.116"><g transform="translate(0 -209)" clip-path="url(#project-home-path)"><g transform="translate(-6401.271 -37018.621)" clip-path="url(#project-home-path-2)"><path d="M-5-214H1498.794V1939.63H-5Z" transform="translate(6364.919 37183.449)" fill="#8fc4c3"/></g></g></g></svg>
     </header>
@@ -81,12 +80,12 @@
 
         <!-- DESCRIPTION -->
         <section id="project-description" class="container-fluid">
-            <div class="container d-flex flex-column justify-content-around">
+            <div class="container d-flex flex-column justify-content-around my-4">
 
                 <!-- description text -->
                 <div class="row mb-4">
                     <div class="col-12">
-                        <p id="project-description-text">
+                        <p id="project-description-text" class="m-0">
                             Création d’une <strong>base de données SQL</strong> de sept tables et gestion des <strong>intéractions</strong>.<br/>
                             Système d’<strong>authentification côté serveur</strong> pour accéder à l’application.<br/>
                             Fonctionnalités <strong>Create Read Update Delete</strong> utilisant un <strong>système de modales</strong>.<br/>
@@ -99,25 +98,21 @@
                     </div>
                 </div>
 
-                <div class="row mb-4">
+                <div class="row mb-4 d-flex align-items-end">
 
                     <!-- description title -->
-                    <div class="col-6 d-flex align-items-end">
-                        <p>
-                            HIKING Tableau de bord de gestion d'excursions<br/>
-                            Juillet 2020 - Formation ACS<br/>
-                            <a href="https://github.com/GuillaumePerbet/hiking" target="_blank" rel="noopener noreferrer">Voir le code</a>
-                        </p>
+                    <div class="col-12 col-sm-12 col-xl-6 mb-3 mb-sm-3 mb-xl-0">
+                        <p class="m-0">HIKING,</p>
+                        <p class="m-0">Tableau de bord de gestion d'excursions</p>
+                        <p class="regular m-0">Juillet 2020 - Formation ACS</p>
+                        <p class="m-0 text-right text-sm-right text-xl-left"><a href="https://github.com/GuillaumePerbet/hiking" target="_blank" rel="noopener noreferrer">Voir le code</a></p>
                     </div>
 
                     <!-- description link -->
-                    <div class="col-5 offset-1">
-                        <p>
-                            Utilisateur: Administrateur<br/>
-                            Mot de passe: root<br/>
-                            <a href="https://guillaumep.promo-39.codeur.online/hiking/" target="_blank" rel="noopener noreferrer">Tester l'application</a>
-                        </p>
-                        
+                    <div class="col-12 col-sm-12 col-xl-5 offset-xl-1">
+                        <p class="m-0">Utilisateur: <span class="regular">Administrateur</span></p>
+                        <p class="m-0">Mot de passe: <span class="regular">root</span></p>
+                        <p class="m-0 text-right text-sm-right text-xl-left"><a href="https://guillaumep.promo-39.codeur.online/hiking/" target="_blank" rel="noopener noreferrer">Tester l'application</a></p>
                     </div>
                 </div>
             </div>
@@ -126,6 +121,7 @@
         <!-- IMAGE -->
         <section id="project-image" class="container-fluid">
         </section>
+    </main>
 
     <!-- scripts -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
