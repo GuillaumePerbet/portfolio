@@ -494,6 +494,8 @@ ul{//list reset
 
 		@media (max-width: 575.98px) {
 			@include size(16);
+			max-width: 16rem;
+			margin: auto;
 		}
 	}
 
@@ -639,10 +641,18 @@ ul{//list reset
 	@include color('blue');
 	@include size(20);
 
+	@media (max-width: 575.98px) {
+		@include size(16);
+	}
+
 	&-carousel{//project carousel
 
 		&-prev, &-next{//project carousel controls
 			writing-mode: vertical-rl;
+
+			@media (max-width: 575.98px) {
+				writing-mode: horizontal-tb;
+			}
 
 			a{
 				transition: all 0.5s cubic-bezier(.25,.8,.25,1);
@@ -656,6 +666,10 @@ ul{//list reset
 		&-prev{
 			transform: rotate(180deg);
 			z-index: 2;
+
+			@media (max-width: 575.98px) {
+				transform: rotate(0);
+			}
 		}
 			
 		img{//project carousel image
@@ -664,7 +678,7 @@ ul{//list reset
 			@include shadow();
 		}
 
-		&-coin-xl{//project carousel coin
+		&-coin{//project carousel coin
 			position: absolute;
 			left: -2.5rem;
 			top: 1rem;
@@ -681,6 +695,10 @@ ul{//list reset
 	&-title{//project title
 		@include size(34);
 
+		@media (max-width: 575.98px) {
+			margin: 0.5rem 0;
+		}
+
 		&::before{//project title deco
 			content: '';
 			position: absolute;
@@ -689,12 +707,27 @@ ul{//list reset
 			height: 7.0625rem;
 			bottom: 105%;
 			background-image: url("../media/project-title-deco.svg");
+
+			@media (max-width: 575.98px) {
+				display: none;
+			}
+		}
+	}
+
+	&-date{
+		@media (max-width: 575.98px) {
+			@include size(14);
+			margin-bottom: 1.5rem;
 		}
 	}
 
 	&-link{//project link
 		@include color('red');
 		transition: all 0.5s cubic-bezier(.25,.8,.25,1);
+
+		@media (max-width: 575.98px) {
+			@include size(20);
+		}
 
 		&:hover{
 			letter-spacing: 0.25rem;
@@ -713,6 +746,10 @@ ul{//list reset
 			margin-bottom: 0.4rem;
 			@include background('red');
 			transition: all 0.5s cubic-bezier(.25,.8,.25,1);
+
+			@media (max-width: 575.98px) {
+				width: 3rem;
+			}
 		}
 	}
 
@@ -721,18 +758,34 @@ ul{//list reset
 		width: 117vw;
 		top: -34vh;
 		right: -5vw;
+
+		@media (max-width: 575.98px) {
+			width: 250vw;
+			top: -25vh;
+			right: -50vw;
+		}
 	}
 
 	&-feather{
 		width: 7vw;
 		bottom: 33vh;
 		left: 0;
+
+		@media (max-width: 575.98px) {
+			width: 20vw;
+			bottom: -3vh;
+		}
 	}
 
 	&-drone{
 		width: 7vw;
 		top: 0;
 		right: 2vw;
+
+		@media (max-width: 575.98px) {
+			width: 16vw;
+			right: 20vw;
+		}
 	}
 }
 
