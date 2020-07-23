@@ -764,6 +764,10 @@ ul{//list reset
 		@media (max-width: 1199.98px) {
 			margin-bottom: 6rem;
 		}
+
+		@media (max-width: 575.98px) {
+			margin-bottom: 0;
+		}
 	}
 
 	&-title{//project title
@@ -908,7 +912,7 @@ ul{//list reset
 		}
 
 		span{//contact red star
-			margin-left: -0.5rem;
+			margin-left: 0.1rem;
 		}
 
 		label{//label
@@ -953,7 +957,7 @@ ul{//list reset
 			font-family: 'IBM-Bold', sans-serif;
 			@include size(20);
 			@include background('light-aqua');
-			border: 0.125rem solid rgba(255,255,255,0.6);
+			border: 0.125rem solid rgba(255,255,255,0.4);
 			letter-spacing: 0.3rem;
 			border-radius: 3rem;
 			@include shadow();
