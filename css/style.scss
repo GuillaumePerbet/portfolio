@@ -868,6 +868,7 @@ ul{//list reset
 
 			@media (max-width: 575.98px) {
 				@include size(18);
+				max-width: 16rem;
 			}
 			
 			&:hover{
@@ -885,18 +886,21 @@ ul{//list reset
 
 		&-social{//contact bottom social links
 
+			padding-left: 2.65vw;
+			padding-bottom: 3.2vh;
+
 			svg{
 				@include background('blue');
-				padding: 1.5rem 0 0.1rem 1.6vw;
+				padding-top: 1rem;
 				box-sizing: content-box;
 			}
 
 			address{
 				@include background('blue');
 				@include size(22);
-				padding: 1rem 1rem 3vh 1.8vw;
 				font-family: 'IBM-Medium', sans-serif;
 				margin-bottom: 0;
+				padding-right: 0.75rem;
 
 				a:hover{
 					@include color('white');
@@ -905,8 +909,8 @@ ul{//list reset
 				&::before{
 					content: url('../media/contact-mail.svg');
 					display: inline-block;
+					padding: 1rem 0.2rem 0;
 					margin-right: 0.5rem;
-					margin-top: 0.5rem;
 				}
 			}
 		}
