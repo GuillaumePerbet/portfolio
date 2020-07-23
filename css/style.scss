@@ -527,7 +527,7 @@ ul{//list reset
 		@include size(58);
 
 		@media (max-width: 575.98px) {
-			@include size(28);
+			@include size(29);
 			text-align: center;
 			margin: 1rem 0;
 		}
@@ -986,9 +986,14 @@ ul{//list reset
 		@include size(20);
 		letter-spacing: 0.3rem;
 		@include background('white');
+		@include color('red');
 		border: 0.125rem solid map-get($colors,'red');
 		border-radius: 3rem;
 		@include shadow();
+
+		@media (max-width: 575.98px) {
+			@include size(17);
+		}
 
 		&:hover{
 			@include color('red');
