@@ -727,6 +727,7 @@ ul{//list reset
 
 		@media (max-width: 575.98px) {
 			@include size(20);
+			margin: auto;
 		}
 
 		&:hover{
@@ -748,7 +749,7 @@ ul{//list reset
 			transition: all 0.5s cubic-bezier(.25,.8,.25,1);
 
 			@media (max-width: 575.98px) {
-				width: 3rem;
+				width: 4rem;
 			}
 		}
 	}
@@ -773,7 +774,7 @@ ul{//list reset
 
 		@media (max-width: 575.98px) {
 			width: 20vw;
-			bottom: -3vh;
+			bottom: -4vh;
 		}
 	}
 
