@@ -281,11 +281,15 @@ ul{//list reset
 		z-index: 1;
 
 		@media (max-width: 1199.98px){
+			@include size(130);
+		}
+
+		@media (max-width: 991.98px){
 			@include size(96);
 		}
 
 		@media (max-width: 575.98px) {
-			@include size(40);
+			@include size(50);
 		}
 
 		>span{//home title letters
@@ -332,8 +336,8 @@ ul{//list reset
 					}
 
 					@media (max-width: 575.98px) {
-						height: 1.7rem;
-						width: 1.7rem;
+						height: 2rem;
+						width: 2rem;
 					}
 				}
 			}
@@ -596,9 +600,11 @@ ul{//list reset
 		@include size(58);
 
 		@media (max-width: 1199.98px){
-			@include size(50);
 			text-align: center;
-			margin: 1rem 0;
+		}
+
+		@media (max-width: 767.98px){
+			@include size(50);
 		}
 
 		@media (max-width: 575.98px) {
@@ -612,7 +618,7 @@ ul{//list reset
 		max-width: 14rem;
 
 		@media (max-width: 575.98px) {
-			@include size(14);
+			@include size(16);
 		}
 
 		&::before{//skill decoration
@@ -622,6 +628,10 @@ ul{//list reset
 			background-position: center;
 			width: 100%;
 			height: 9.5rem;
+
+			@media (max-width: 575.98px) {
+				height: 6rem;
+			}
 		}
 	}
 
@@ -824,11 +834,13 @@ ul{//list reset
 			margin: auto;
 		}
 
-		&:hover{
-			letter-spacing: 0.25rem;
-
-			&::before{
-				width: 1.5rem;
+		@media (min-width: 330px){
+			&:hover{
+				letter-spacing: 0.25rem;
+	
+				&::before{
+					width: 1.5rem;
+				}
 			}
 		}
 
@@ -1045,13 +1057,11 @@ ul{//list reset
 
 		&-legal{//contact bottom legal mention
 			font-family: 'IBM-Regular', sans-serif;
-			padding-right: 5vw;
-			margin-bottom: 1vh;
 			opacity: 0.6;
 			text-decoration: underline;
 
 			&:hover{
-				@include color('white');
+				color: inherit;
 			}
 		}
 	}
