@@ -1,31 +1,7 @@
-//DISPLAY FUNCTIONS
-function showMenu(){
-    const menu = document.getElementById('menu');
-    menu.classList.remove('d-none');
-}
-
-function hideMenu(){
-    const menu = document.getElementById('menu');
-    menu.classList.add('d-none');
-}
-
-function showTopBar(){
-    const topBar = document.getElementById('top-bar');
-    topBar.classList.remove('d-none');
-}
-
-function hideTopBar(){
-    const topBar = document.getElementById('top-bar');
-    topBar.classList.add('d-none');
-}
-
 //SMOOTH SCROLL ANCHOR LINK__________________________________________
 const anchorlinks = document.querySelectorAll('a[href^="#"]');
 for (let item of anchorlinks) {
     item.addEventListener('click', (e)=> {
-        //for menu links
-        hideMenu();
-        showTopBar();
         let hashval = item.getAttribute('href');
         let target = document.querySelector(hashval);
         target.scrollIntoView({
@@ -37,19 +13,28 @@ for (let item of anchorlinks) {
     });
 }
 
-//OPEN MENU_________________________________________________________
+//TOGGLE MENU_________________________________________________________
+const menu = document.getElementById('menu');
+
+function toggleMenu(){//toggle function
+    menu.classList.toggle('open');
+    menuBtn.classList.toggle('open');
+    const logo = document.getElementById('top-bar-logo');
+    logo.classList.toggle('open');
+}
+
 const menuBtn = document.getElementById('top-bar-menu-btn');
-menuBtn.addEventListener('click',()=>{
-    hideTopBar();
-    showMenu();
+menuBtn.addEventListener('click',()=>{//event on menu button click
+    toggleMenu();
 });
 
-//CLOSE MENU_____________________________________________________________
-const closeBtn = document.getElementById('menu-close');
-closeBtn.addEventListener('click',()=>{
-    hideMenu();
-    showTopBar();
-});
+const links = menu.getElementsByTagName('a');
+for (let link of links){//event on menu item click
+    link.addEventListener('click',(e)=>{
+        e.preventDefault();
+        toggleMenu();
+    });
+}
 
 //SUBMIT CONTACT FORM___________________________________________________
 const contactForm = document.querySelector("#contact form");
