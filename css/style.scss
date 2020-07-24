@@ -1111,6 +1111,7 @@ ul{//list reset
 		border: 0.125rem solid map-get($colors,'red');
 		border-radius: 3rem;
 		@include shadow();
+		max-width: 16rem;
 
 		@media (max-width: 575.98px) {
 			@include size(17);
