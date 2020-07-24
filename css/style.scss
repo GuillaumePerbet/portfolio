@@ -277,6 +277,8 @@ ul{//list reset
 	h1{//home title
 		@include size(144);
 		@include color('red');
+		position: relative;
+		z-index: 1;
 
 		@media (max-width: 1199.98px){
 			@include size(96);
@@ -344,6 +346,7 @@ ul{//list reset
 		font-family: 'IBM-Medium', sans-serif;
 		@include size(28);
 		position: relative;
+		z-index: 1;
 		top: 2rem;
 
 		@media (max-width: 575.98px) {
@@ -787,6 +790,10 @@ ul{//list reset
 			background-image: url("../media/project-title-deco.svg");
 
 			@media (max-width: 1199.98px) {
+				right: 41.5%;
+			}
+
+			@media (max-width: 767.98px) {
 				right: 39%;
 			}
 
@@ -895,7 +902,7 @@ ul{//list reset
 		border-radius: 1rem;
 		margin: 5vh 3vw;
 
-		@media (max-width: 575.98px) {
+		@media (max-width: 1199.98px) {
 			border: none;
 			margin: 0;
 		}
@@ -948,7 +955,7 @@ ul{//list reset
 		input[name=name]{
 			margin-left: -6rem;
 
-			@media (max-width: 575.98px) {
+			@media (max-width: 1199.98px) {
 				margin-left: 0;
 			}
 		}
@@ -962,7 +969,7 @@ ul{//list reset
 			border-radius: 3rem;
 			@include shadow();
 
-			@media (max-width: 575.98px) {
+			@media (max-width: 1199.98px) {
 				@include size(18);
 				max-width: 16rem;
 			}
