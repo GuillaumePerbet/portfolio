@@ -17,10 +17,21 @@ for (let item of anchorlinks) {
 const menu = document.getElementById('menu');
 
 function toggleMenu(){//toggle function
+    //toggle menu
     menu.classList.toggle('open');
     menuBtn.classList.toggle('open');
+
+    //toggle logo on index page
     const logo = document.getElementById('top-bar-logo');
-    logo.classList.toggle('open');
+    if (logo!==null){
+        logo.classList.toggle('open');
+    }
+
+    //toggle return button on project page
+    const returnBtn = document.getElementById('top-bar-return');
+    if (returnBtn!==null){
+        returnBtn.classList.toggle('open');
+    }
 }
 
 const menuBtn = document.getElementById('top-bar-menu-btn');
@@ -36,14 +47,16 @@ for (let link of links){//event on menu item click
     });
 }
 
-//SUBMIT CONTACT FORM___________________________________________________
+//CONTACT FORM___________________________________________________
 const contactForm = document.querySelector("#contact form");
-contactForm.addEventListener('submit',(e)=>{
-    e.preventDefault();
-    const formData = new FormData(contactForm);
-    fetch('ajax/contact-form.php',{method: 'POST', body: formData}).then();
-});
+if (contactForm!==null){
+    //name input focus
+    const nameInput = document.getElementsByName('name')[0];
+    nameInput.focus({preventScroll: true});
 
-//PREVENT SCROLL TO FOCUS INPUT__________________________________________
-const nameInput = document.getElementsByName('name')[0];
-nameInput.focus({preventScroll: true});
+    contactForm.addEventListener('submit',(e)=>{//form submission
+        e.preventDefault();
+        const formData = new FormData(contactForm);
+        fetch('ajax/contact-form.php',{method: 'POST', body: formData}).then();
+    });
+}
