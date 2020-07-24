@@ -737,16 +737,47 @@ ul{//list reset
 		}
 
 		&-coin{//project carousel coin
-			position: absolute;
-			left: -2.5rem;
-			top: 1rem;
-			width: 7.5rem;
-			@include color('white');
-			@include background('light-aqua');
-			border-radius: 100%;
-			opacity: 0.7;
-			z-index: 3;
-			@include size(26);
+
+			&-head, &-tail{
+				position: absolute;
+				left: -2.85rem;
+				top: 1rem;
+				width: 7.5rem;
+				@include color('white');
+				@include background('light-aqua');
+				border-radius: 100%;
+				opacity: 0;
+				z-index: 3;
+				@include size(26);
+				transform: rotate3d(0,1,0,90deg);
+			}
+			
+			@keyframes coin-rotate{
+				0%{
+					opacity: 0.7;
+					transform: rotate3d(0,1,0,-90deg);
+				}
+				50%{
+					opacity: 0.7;
+					transform: rotate3d(0,1,0,90deg);
+				}
+				50.00001%{
+					opacity: 0;
+					transform: rotate3d(0,1,0,90deg);
+				}
+				100%{
+					opacity: 0;
+					transform: rotate3d(0,1,0,270deg);
+				}
+			}
+
+			&-head{
+				animation: coin-rotate 4s infinite linear;
+			}
+			
+			&-tail{
+				animation: coin-rotate 4s 2s infinite linear;
+			}
 		}
 
 		@media (max-width: 1199.98px) {
