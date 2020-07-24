@@ -1104,6 +1104,13 @@ ul{//list reset
 }
 
 //PROJECT HOME__________________________________________
+#project{
+	background-image: url('../media/project-bck.svg');
+	background-repeat: no-repeat;
+	background-position: 50% -30vw;
+	background-size: 200vw auto;
+}
+
 #project-home{
 	overflow: visible;
 
@@ -1126,22 +1133,6 @@ ul{//list reset
 				height: auto;
 				max-height: none;
 			}
-		}
-	}
-
-	&-plant{//project home background
-		width: 100vw;
-		right: 0vw;
-		top: -40vh;
-
-		@media (max-width: 1199.98px){
-			width: 200vw;
-			top: -35vh;
-			right: -30vw;
-		}
-
-		@media (max-width: 767.98px) {
-			top: -20vh;
 		}
 	}
 }
