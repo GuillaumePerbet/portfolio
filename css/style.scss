@@ -210,7 +210,7 @@ ul{//list reset
 		transition: transform 0.4s ease 0s;
 
 		&.open{
-			transform: translateX(-10rem);
+			transform: translateX(-20rem);
 		}
 
 		@media (max-width: 575.98px) {
