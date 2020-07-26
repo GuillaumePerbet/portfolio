@@ -87,7 +87,7 @@ a{//link reset and z-position
 	position: relative;
 	z-index: 2;
 
-	&:hover{
+	&:hover, &:visited{
 		text-decoration: none;
 	}
 }
@@ -527,10 +527,12 @@ ul{//list reset
 		border-radius: 3rem;
 		@include shadow();
 
-		&:hover{
-			@include color('white');
-			@include background('light-aqua');
-			letter-spacing: 0.4rem;
+		@media (min-width: 1200px){
+			&:hover{
+				@include color('white');
+				@include background('light-aqua');
+				letter-spacing: 0.4rem;
+			}
 		}
 
 		@media (max-width: 1199.98px){
@@ -996,11 +998,13 @@ ul{//list reset
 				max-width: 16rem;
 			}
 			
-			&:hover{
-				@include color('aqua');
-				@include background('white');
-				border-color: map-get($colors,'aqua');
-				letter-spacing: 0.4rem;
+			@media (min-width: 1200px){
+				&:hover{
+					@include color('aqua');
+					@include background('white');
+					border-color: map-get($colors,'aqua');
+					letter-spacing: 0.4rem;
+				}
 			}
 		}
 	}
