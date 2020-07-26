@@ -640,6 +640,12 @@ ul{//list reset
 
 	&-galaxy{//skill galaxy
 
+		tspan{
+			font-family: "IBM-Bold";
+			font-size: 1.4rem;
+			letter-spacing: 0.1rem;
+		}
+
 		@keyframes rotate{
 			from{
 				transform: translate(50%,-50%) rotate(0);
