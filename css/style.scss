@@ -1116,7 +1116,7 @@ ul{//list reset
 		@include shadow();
 		max-width: 16rem;
 		transform: translateX(0);
-		transition: transform 0.4s ease 0s;
+		transition: all 0.4s ease 0s;
 
 		&.open{
 			transform: translateX(-20rem);
