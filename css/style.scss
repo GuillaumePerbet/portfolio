@@ -261,6 +261,10 @@ ul{//list reset
 		}
 
 		@media (max-width: 575.98px) {
+			@include size(60);
+		}
+
+		@media (max-width: 380px) {
 			@include size(50);
 		}
 
@@ -308,8 +312,13 @@ ul{//list reset
 					}
 
 					@media (max-width: 575.98px) {
+						height: 2.5rem;
+						width: 2.6rem;
+					}
+
+					@media (max-width: 380px) {
 						height: 2rem;
-						width: 2rem;
+						width: 2.1rem;
 					}
 				}
 			}
@@ -320,13 +329,13 @@ ul{//list reset
 
 	h2{//home subtitle
 		font-family: 'IBM-Medium', sans-serif;
-		@include size(28);
+		@include size(30);
 		position: relative;
 		z-index: 1;
 		top: 2rem;
 
-		@media (max-width: 575.98px) {
-			@include size(14);
+		@media (max-width: 1199.98px) {
+			@include size(18);
 			top: 0;
 		}
 
@@ -336,13 +345,13 @@ ul{//list reset
 			width: 5.5rem;
 			height: 0.15rem;
 			flex-shrink: 0;
-			margin-top: 1.5rem;
+			margin-top: 1rem;
 			margin-right: 2rem;
 			@include background('red');
 
 			@media (max-width: 575.98px) {
-				width: 17vw;
-				margin: 0.4rem 0.75rem 0;
+				width: 4rem;
+				margin: 0.6rem 0.75rem 0;
 			}
 		}
 	}
