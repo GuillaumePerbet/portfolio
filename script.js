@@ -41,7 +41,30 @@ if (contactForm!==null){
     contactForm.addEventListener('submit',(e)=>{//form submission
         e.preventDefault();
         const formData = new FormData(contactForm);
-        fetch('ajax/contact-form.php',{method: 'POST', body: formData}).then();
+        fetch('ajax/contact-form.php',{method: 'POST', body: formData}).then(res=>res.json()).then(data=>{
+            const contactResponse = document.getElementById('contact-response');
+            const emailError = document.getElementById('contact-emailError');
+            const messageError = document.getElementById('contact-messageError');
+            //reset error messages
+            emailError.classList.add('d-none');
+            messageError.classList.add('d-none');
+            contactResponse.classList.remove('failure');
+            if(data.send == true){//email send with success
+                contactForm.reset();
+                contactResponse.classList.add('success');
+                contactResponse.innerText = "Merci pour votre message!";
+            }else{//email failure
+                contactResponse.classList.remove('success');
+                contactResponse.classList.add('failure');
+                contactResponse.innerText = "Echec de l'envoi";
+                if(data.emailError){//check if email was fill
+                    emailError.classList.remove('d-none');
+                }
+                if(data.messageError){//check if message was fill
+                    messageError.classList.remove('d-none');
+                }
+            }
+        });
     });
 }
 

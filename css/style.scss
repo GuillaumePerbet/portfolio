@@ -1022,6 +1022,21 @@ ul{//list reset
 				}
 			}
 		}
+
+		.error{//error message
+			@include color('red');
+			@include size(13);
+		}
+
+		.failure{//send mail failure
+			@include color('red');
+			@include size(17);
+		}
+
+		.success{//send mail success
+			@include color('aqua');
+			@include size(17);
+		}
 	}
 
 	&-bottom-xl{//contact bottom bar XL

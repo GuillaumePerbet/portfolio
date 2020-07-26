@@ -1,34 +1,52 @@
 <?php
 
-//POSTED VALUES_______________________________________________
-$name = htmlspecialchars($_POST['name']);
-$email = htmlspecialchars($_POST['email']);
-$society = htmlspecialchars($_POST['society']);
-$phone = htmlspecialchars($_POST['phone']);
-$subject = htmlspecialchars($_POST['subject']);
-$message = htmlspecialchars($_POST['message']);
+$response = [];
 
-//VALIDATION__________________________________________________
-$error = false;
-
-//name
-if (!preg_match("/^[a-zA-Z ]*$/",$name) && $name!="") {
-    $error = true; 
+//message
+if (isset($_POST['message']) && !empty($_POST['message'])){
+    $message = htmlspecialchars($_POST['message']);
+}else{
+    $response['messageError'] = true; 
 }
 
 //email
-if (!filter_var($email, FILTER_VALIDATE_EMAIL) && $email!="") {
-    $error = true;
+if (isset($_POST['email']) && !empty($_POST['email']) && preg_match("#^[\w\-\.\+]{1,64}@([\w\-]+\.)+[a-z]{2,}$#i",$_POST['email'])!=0){
+    $email = htmlspecialchars($_POST['email']);
+}else{
+    $response['emailError'] = true; 
+}
+
+//name
+if (isset($_POST['name'])){
+    $name = htmlspecialchars($_POST['name']);
+}else{
+    $response['nameError'] = true; 
 }
 
 //society
+if (isset($_POST['society'])){
+    $society = htmlspecialchars($_POST['society']);
+}else{
+    $response['societyError'] = true; 
+}
 
 //phone
+if (isset($_POST['phone'])){
+    $phone = htmlspecialchars($_POST['phone']);
+}else{
+    $response['phoneError'] = true; 
+}
 
-//message
+//phone
+if (isset($_POST['subject'])){
+    $subject = htmlspecialchars($_POST['subject']);
+}else{
+    $response['subjectError'] = true; 
+}
 
 //errors?
-if($error){
+if($response){
+    echo json_encode($response);
     exit;
 }
 
@@ -55,4 +73,5 @@ $headers .= "X-Priority: 3\r\n";
 $headers .= "X-Mailer: PHP". phpversion() ."\r\n";
 
 // Send the email
-mail($me, $object, $body, $headers);
+$response["send"] = mail($me, $object, $body, $headers);
+echo json_encode($response);
