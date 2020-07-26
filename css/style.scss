@@ -1177,20 +1177,16 @@ ul{//list reset
 		@include size(15);
 	}
 
-	>div{
-		min-height: 100vh;
+	&::before{//project description decoration line
+		content: "";
+		display: block;
+		width: 0.125rem;
+		height: 5rem;
+		margin: 1rem auto;
+		@include background('red');
 
-		&::before{//project description decoration line
-			content: "";
-			display: block;
-			width: 0.125rem;
-			height: 5rem;
-			margin: 1rem auto;
-			@include background('red');
-
-			@media (max-width: 575.98px) {
-				height: 3.75rem;
-			}
+		@media (max-width: 575.98px) {
+			height: 3.75rem;
 		}
 	}
 
