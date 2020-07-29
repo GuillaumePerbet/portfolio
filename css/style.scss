@@ -122,6 +122,46 @@ ul{//list reset
 	pointer-events: auto;
 }
 
+//STARS ANIMATION_________________________________
+@-webkit-keyframes blink {
+    0%   {opacity:0;}
+
+    50% {opacity:1;}
+
+    100% {opacity:0}
+}
+
+@-moz-keyframes blink {
+    0%   {opacity:0;}
+
+    50% {opacity:1;}
+
+    100% {opacity:0}
+}
+
+@keyframes blink {
+    0%   {opacity:0;}
+
+    50% {opacity:1;}
+
+    100% {opacity:0}
+}
+
+.blink{
+
+	&1{
+		animation: blink infinite 3s;
+	}
+
+    &2{
+		animation: blink infinite 5s;
+	}
+  
+	&3{
+		animation: blink infinite 4s;
+	}
+}
+
 //MENU____________________________________________
 #menu{
 	overflow: hidden;
@@ -272,6 +312,48 @@ ul{//list reset
 			
 			@for $i from 1 through 15{//home title letters animation
 				#letter-#{$i}{
+					@-webkit-keyframes float-#{$i}{
+						0%{
+							transform: translate(0,0);
+						}
+						20%{
+							transform: translate(random(200) / 100 - 1 + vw, random(200) / 100 - 1 + vw);
+						}
+						40%{
+							transform: translate(random(200) / 100 - 1 + vw, random(200) / 100 - 1 + vw);
+						}
+						60%{
+							transform: translate(random(200) / 100 - 1 + vw, random(200) / 100 - 1 + vw);
+						}
+						80%{
+							transform: translate(random(200) / 100 - 1 + vw, random(200) / 100 - 1 + vw);
+						}
+						100%{
+							transform: translate(random(200) / 100 - 1 + vw, random(200) / 100 - 1 + vw);
+						}
+					}
+
+					@-moz-keyframes float-#{$i}{
+						0%{
+							transform: translate(0,0);
+						}
+						20%{
+							transform: translate(random(200) / 100 - 1 + vw, random(200) / 100 - 1 + vw);
+						}
+						40%{
+							transform: translate(random(200) / 100 - 1 + vw, random(200) / 100 - 1 + vw);
+						}
+						60%{
+							transform: translate(random(200) / 100 - 1 + vw, random(200) / 100 - 1 + vw);
+						}
+						80%{
+							transform: translate(random(200) / 100 - 1 + vw, random(200) / 100 - 1 + vw);
+						}
+						100%{
+							transform: translate(random(200) / 100 - 1 + vw, random(200) / 100 - 1 + vw);
+						}
+					}
+
 					@keyframes float-#{$i}{
 						0%{
 							transform: translate(0,0);
@@ -646,6 +728,24 @@ ul{//list reset
 			letter-spacing: 0.1rem;
 		}
 
+		@-webkit-keyframes rotate{
+			from{
+				transform: translate(50%,-50%) rotate(0);
+			}
+			to{
+				transform: translate(50%,-50%) rotate(360deg);
+			}
+		}
+
+		@-moz-keyframes rotate{
+			from{
+				transform: translate(50%,-50%) rotate(0);
+			}
+			to{
+				transform: translate(50%,-50%) rotate(360deg);
+			}
+		}
+
 		@keyframes rotate{
 			from{
 				transform: translate(50%,-50%) rotate(0);
@@ -767,6 +867,44 @@ ul{//list reset
 				z-index: 3;
 				@include size(26);
 				transform: rotate3d(0,1,0,90deg);
+			}
+
+			@-webkit-keyframes coin-rotate{
+				0%{
+					opacity: 0.7;
+					transform: rotate3d(0,1,0,-90deg);
+				}
+				50%{
+					opacity: 0.7;
+					transform: rotate3d(0,1,0,90deg);
+				}
+				50.00001%{
+					opacity: 0;
+					transform: rotate3d(0,1,0,90deg);
+				}
+				100%{
+					opacity: 0;
+					transform: rotate3d(0,1,0,270deg);
+				}
+			}
+
+			@-moz-keyframes coin-rotate{
+				0%{
+					opacity: 0.7;
+					transform: rotate3d(0,1,0,-90deg);
+				}
+				50%{
+					opacity: 0.7;
+					transform: rotate3d(0,1,0,90deg);
+				}
+				50.00001%{
+					opacity: 0;
+					transform: rotate3d(0,1,0,90deg);
+				}
+				100%{
+					opacity: 0;
+					transform: rotate3d(0,1,0,270deg);
+				}
 			}
 			
 			@keyframes coin-rotate{
