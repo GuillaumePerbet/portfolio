@@ -1275,3 +1275,21 @@ ul{//list reset
 		background-repeat: no-repeat;
 	}
 }
+
+//TERMS AND CONDITIONS_____________________________
+#terms{
+    @include background('blue');
+	padding: 3rem 0;
+
+	h1{
+		@include color('red');
+	}
+
+	h2{
+		@include color('aqua');
+	}
+	
+	p{
+		font-family: "IBM-Regular", sans-serif;
+	}
+}
