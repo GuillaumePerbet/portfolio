@@ -405,8 +405,6 @@ ul{//list reset
 				}
 			}
 		}
-		
-		
 	}
 
 	h2{//home subtitle
@@ -855,83 +853,105 @@ ul{//list reset
 
 		&-coin{//project carousel coin
 
-			&-head, &-tail{
+			&-1, &-2, &-3, &-4, &-5, &-6{
 				position: absolute;
-				left: -2.85rem;
+				left: -3.07rem;
 				top: 1rem;
-				width: 7.5rem;
+				width: 8rem;
+				height: 10rem;
 				@include color('white');
 				@include background('light-aqua');
 				border-radius: 100%;
-				opacity: 0;
+				opacity: 0.7;
 				z-index: 3;
-				@include size(26);
+				@include size(20);
 				transform: rotate3d(0,1,0,90deg);
 			}
-
+			
 			@-webkit-keyframes coin-rotate{
 				0%{
-					opacity: 0.7;
 					transform: rotate3d(0,1,0,-90deg);
 				}
-				50%{
-					opacity: 0.7;
+				20%{
 					transform: rotate3d(0,1,0,90deg);
 				}
-				50.00001%{
-					opacity: 0;
+				40%{
+					transform: rotate3d(0,1,0,90deg);
+				}
+				60%{
+					transform: rotate3d(0,1,0,90deg);
+				}
+				80%{
+					opacity: 0.7;
 					transform: rotate3d(0,1,0,90deg);
 				}
 				100%{
-					opacity: 0;
-					transform: rotate3d(0,1,0,270deg);
+					transform: rotate3d(0,1,0,90deg);
 				}
 			}
 
 			@-moz-keyframes coin-rotate{
 				0%{
-					opacity: 0.7;
 					transform: rotate3d(0,1,0,-90deg);
 				}
-				50%{
-					opacity: 0.7;
+				20%{
 					transform: rotate3d(0,1,0,90deg);
 				}
-				50.00001%{
-					opacity: 0;
+				40%{
+					transform: rotate3d(0,1,0,90deg);
+				}
+				60%{
+					transform: rotate3d(0,1,0,90deg);
+				}
+				80%{
+					opacity: 0.7;
 					transform: rotate3d(0,1,0,90deg);
 				}
 				100%{
-					opacity: 0;
-					transform: rotate3d(0,1,0,270deg);
-				}
-			}
-			
-			@keyframes coin-rotate{
-				0%{
-					opacity: 0.7;
-					transform: rotate3d(0,1,0,-90deg);
-				}
-				50%{
-					opacity: 0.7;
 					transform: rotate3d(0,1,0,90deg);
-				}
-				50.00001%{
-					opacity: 0;
-					transform: rotate3d(0,1,0,90deg);
-				}
-				100%{
-					opacity: 0;
-					transform: rotate3d(0,1,0,270deg);
 				}
 			}
 
-			&-head{
-				animation: coin-rotate 4s infinite linear;
+			@keyframes coin-rotate{
+				0%{
+					transform: rotate3d(0,1,0,-90deg);
+				}
+				20%{
+					transform: rotate3d(0,1,0,90deg);
+				}
+				40%{
+					transform: rotate3d(0,1,0,90deg);
+				}
+				60%{
+					transform: rotate3d(0,1,0,90deg);
+				}
+				80%{
+					opacity: 0.7;
+					transform: rotate3d(0,1,0,90deg);
+				}
+				100%{
+					transform: rotate3d(0,1,0,90deg);
+				}
 			}
-			
-			&-tail{
-				animation: coin-rotate 4s 2s infinite linear;
+
+			&-1{
+				animation: coin-rotate 10s infinite linear;
+			}
+
+			&-2{
+				animation: coin-rotate 10s 2s infinite linear;
+			}
+
+			&-3{
+				animation: coin-rotate 10s 4s infinite linear;
+			}
+
+			&-4{
+				animation: coin-rotate 10s 6s infinite linear;
+			}
+
+			&-5{
+				animation: coin-rotate 10s 8s infinite linear;
 			}
 		}
 
