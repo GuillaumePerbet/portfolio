@@ -833,6 +833,8 @@ ul{//list reset
 
 	&-carousel{//project carousel
 
+		margin-bottom: 3rem;
+
 		&-prev, &-next{//project carousel controls
 			writing-mode: vertical-rl;
 
@@ -1076,17 +1078,17 @@ ul{//list reset
 
 	&-feather{
 		width: 7vw;
-		bottom: 33vh;
+		top: 67vh;
 		left: 0;
+		z-index: -1;
 
 		@media (max-width: 1199.98px) {
 			width: 12vw;
-			bottom: 28vh;
 		}
 
 		@media (max-width: 575.98px) {
 			width: 20vw;
-			bottom: -4vh;
+			top: 95vh;
 		}
 	}
 
@@ -1094,6 +1096,7 @@ ul{//list reset
 		width: 7vw;
 		top: 0;
 		right: 2vw;
+		z-index: -1;
 
 		@media (max-width: 1199.98px) {
 			width: 12vw;
