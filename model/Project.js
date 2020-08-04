@@ -22,3 +22,13 @@ projects.push(new Project(
     'ordinateur avec une vue du projet hiking à l\'écran',
     ['Back End', 'Front End', 'CRUD', 'AJAX', 'Responsive']
 ));
+
+projects.push(new Project(
+    'Guillaume Perbet',
+    'Portfolio de développeur web',
+    'Juillet 2020 - Formation ACS',
+    'project-portfolio.html',
+    'media/project-portfolio.png',
+    'ordinateur avec une vue du portfolio à l\'écran',
+    ['Wireframe', 'Intégration', 'Animations', 'Mailing', 'Responsive']
+));
