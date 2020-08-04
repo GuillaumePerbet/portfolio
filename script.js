@@ -1,3 +1,41 @@
+//PROJECT CONTENT_____________________________________________________
+function fillProject(project){
+    //get first project section
+    const projectSection = document.querySelector('#project > div:first-of-type');
+    //fill title
+    const title = projectSection.querySelector('#project-title');
+    title.innerText = project.title;
+    //fill details
+    const details = projectSection.querySelector('#project-details');
+    details.innerText = project.details;
+    //fill date
+    const date = projectSection.querySelector('#project-date');
+    date.innerText = project.date;
+    //fill href
+    const hrefs = projectSection.querySelectorAll('[href]');
+    hrefs.forEach(href=>{
+        href.setAttribute('href',project.href);
+    });
+    //fill src
+    const srcs = projectSection.querySelectorAll('[src]');
+    srcs.forEach(src=>{
+        src.setAttribute('src',project.src);
+    });
+    //fill alt
+    const alts = projectSection.querySelectorAll('[alt]');
+    alts.forEach(alt=>{
+        alt.setAttribute('alt',project.alt);
+    });
+    //fill coin
+    for (let i=0; i<=4; i++){
+        let coin = projectSection.querySelector(`#project-carousel-coin-${i}`);
+        coin.innerText = project.coin[i];
+    }
+}
+
+fillProject(projects[0]);
+
+
 //TOGGLE MENU_________________________________________________________
 const menu = document.getElementById('menu');
 

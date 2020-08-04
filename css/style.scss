@@ -829,6 +829,7 @@ ul{//list reset
 
 			a{
 				transition: all 0.5s cubic-bezier(.25,.8,.25,1);
+				cursor: pointer;
 
 				&:hover{
 					@include color('red');
@@ -853,7 +854,7 @@ ul{//list reset
 
 		&-coin{//project carousel coin
 
-			&-1, &-2, &-3, &-4, &-5, &-6{
+			&-0, &-1, &-2, &-3, &-4{
 				position: absolute;
 				left: -3.07rem;
 				top: 1rem;
@@ -934,23 +935,23 @@ ul{//list reset
 				}
 			}
 
-			&-1{
+			&-0{
 				animation: coin-rotate 10s infinite linear;
 			}
 
-			&-2{
+			&-1{
 				animation: coin-rotate 10s 2s infinite linear;
 			}
 
-			&-3{
+			&-2{
 				animation: coin-rotate 10s 4s infinite linear;
 			}
 
-			&-4{
+			&-3{
 				animation: coin-rotate 10s 6s infinite linear;
 			}
 
-			&-5{
+			&-4{
 				animation: coin-rotate 10s 8s infinite linear;
 			}
 		}
@@ -966,6 +967,7 @@ ul{//list reset
 
 	&-title{//project title
 		@include size(34);
+		margin-bottom: 1rem;
 
 		@media (max-width: 575.98px) {
 			margin: 0.5rem 0;
@@ -1050,6 +1052,7 @@ ul{//list reset
 		width: 117vw;
 		top: -34vh;
 		right: -5vw;
+		z-index: -1;
 
 		@media (max-width: 1199.98px) {
 			width: 250vw;
