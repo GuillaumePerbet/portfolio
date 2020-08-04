@@ -817,6 +817,19 @@ ul{//list reset
 	@media (max-width: 575.98px) {
 		@include size(16);
 	}
+	
+	>div{
+		transition: transform 0.5s;
+		transform: translateX(0vw);
+
+		&.left{
+			transform: translateX(-100vw);
+		}
+
+		&.right{
+			transform: translateX(100vw);
+		}
+	}
 
 	&-carousel{//project carousel
 
