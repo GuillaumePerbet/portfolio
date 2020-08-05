@@ -28,7 +28,7 @@ projects.push(new Project(
     'Portfolio de développeur web',
     'Juillet 2020 - Formation ACS',
     'project-portfolio.html',
-    'media/project-hiking.png',
-    'ordinateur avec une vue du portfolio à l\'écran',
+    'media/project-portfolio.png',
+    'ordinateur, tablette et mobile avec une vue du portfolio à l\'écran',
     ['Wireframe', 'Intégration', 'Animations', 'Mailing', 'Responsive']
 ));
