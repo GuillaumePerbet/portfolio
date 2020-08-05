@@ -20,7 +20,7 @@ projects.push(new Project(
     'project-hiking.html',
     'media/project-hiking.png',
     'ordinateur avec une vue du projet hiking à l\'écran',
-    ['Back End', 'Front End', 'CRUD', 'AJAX', 'Responsive']
+    ['Back End', 'Front End', 'C R U D', 'A J A X', 'Responsive']
 ));
 
 projects.push(new Project(
