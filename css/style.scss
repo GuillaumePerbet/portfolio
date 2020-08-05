@@ -1439,7 +1439,7 @@ ul{//list reset
 	
 }
 
-//PROJECT IMAGE________________________________
+//PROJECT HIKING IMAGE________________________________
 #project-hiking-image{
 	background-image: url('../media/hiking-image.png');
 	background-size: auto 100%;
@@ -1450,6 +1450,92 @@ ul{//list reset
 		width: 100vw;
 		background-size: cover;
 		background-repeat: no-repeat;
+	}
+}
+
+//PROJECT PORTFOLIO IMAGE_______________________________
+#project-portfolio-image{
+	@include background('blue');
+
+	#portfolio-galaxy{//skill galaxy
+
+		tspan{
+			font-family: "IBM-Bold";
+			font-size: 1.4rem;
+			letter-spacing: 0.1rem;
+		}
+
+		@-webkit-keyframes rotate{
+			from{
+				transform: translate(50%,-50%) rotate(0);
+			}
+			to{
+				transform: translate(50%,-50%) rotate(360deg);
+			}
+		}
+
+		@-moz-keyframes rotate{
+			from{
+				transform: translate(50%,-50%) rotate(0);
+			}
+			to{
+				transform: translate(50%,-50%) rotate(360deg);
+			}
+		}
+
+		@keyframes rotate{
+			from{
+				transform: translate(50%,-50%) rotate(0);
+			}
+			to{
+				transform: translate(50%,-50%) rotate(360deg);
+			}
+		}
+
+		svg{
+			position: absolute;
+			top: 50%;
+			right: 50%;
+		}
+		
+		&-planet{
+			height: 10%;
+			transform: translate(50%,-50%);
+		}
+	
+		&-stars-1{
+			height: 23%;
+			animation: rotate 50s infinite linear;
+		}
+	
+		&-circle-1{
+			height: 32%;
+			animation: rotate 50s infinite linear;
+		}
+	
+		&-circle-2{
+			height: 45%;
+			animation: rotate 50s infinite linear reverse;
+		}
+	
+		&-stars-2{
+			height: 60%;
+			animation: rotate 60s infinite linear;
+		}
+	
+		&-circle-3{
+			height: 65%;
+			animation: rotate 70s infinite linear;
+		}
+	
+		&-stars-3{
+			height: 77%;
+			animation: rotate 80s infinite linear reverse;
+		}
+	}
+
+	#portfolio-stars{
+		width: 100vw;
 	}
 }
 
