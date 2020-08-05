@@ -871,14 +871,14 @@ ul{//list reset
 
 			&-0, &-1, &-2, &-3, &-4{
 				position: absolute;
-				left: -3.3rem;
+				right: -3.3rem;
 				top: 1rem;
 				width: 8.5rem;
 				height: 12rem;
 				@include color('white');
 				@include background('light-aqua');
 				border-radius: 100%;
-				opacity: 0.7;
+				opacity: 0.85;
 				z-index: 3;
 				@include size(20);
 				transform: rotate3d(0,1,0,90deg);
