@@ -1,12 +1,14 @@
 class Project{
 
-    constructor(title, details, date, href, src, alt, coin){
+    constructor(title, details, date, href, src, alt, width, height, coin){
         this.title = title;
         this.details = details;
         this.date = date;
         this.href = href;
         this.src = src;
         this.alt = alt;
+        this.width = width;
+        this.height = height;
         this.coin = coin;
     }
 }
@@ -20,6 +22,8 @@ projects.push(new Project(
     'project-hiking.html',
     'media/project-hiking.png',
     'ordinateur avec une vue du projet hiking à l\'écran',
+    '5000',
+    '3334',
     ['Back End', 'Front End', 'C R U D', 'A J A X', 'Responsive']
 ));
 
@@ -30,6 +34,8 @@ projects.push(new Project(
     'project-portfolio.html',
     'media/project-portfolio.png',
     'ordinateur, tablette et mobile avec une vue du portfolio à l\'écran',
+    '1087',
+    '725',
     ['Wireframe', 'Intégration', 'Animations', 'Mailing', 'Responsive']
 ));
 
@@ -58,6 +64,16 @@ function fillProject(section, project){
     const alts = section.querySelectorAll('[alt]');
     alts.forEach(alt=>{
         alt.setAttribute('alt',project.alt);
+    });
+    //fill width
+    const widths = section.querySelectorAll('[width]');
+    widths.forEach(width=>{
+        width.setAttribute('width',project.width);
+    });
+    //fill height
+    const heights = section.querySelectorAll('[height]');
+    heights.forEach(height=>{
+        height.setAttribute('height',project.height);
     });
     //fill coin
     for (let i=0; i<=4; i++){

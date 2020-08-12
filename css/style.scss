@@ -1442,15 +1442,10 @@ ul{//list reset
 //PROJECT HIKING IMAGE________________________________
 #project-hiking-image{
 	background-image: url('../media/hiking-image.png');
-	background-size: auto 100%;
+	background-repeat: no-repeat;
+	background-size: 100% auto;
 	background-position: center;
-
-	@media (max-width: 575.98px) and (orientation:portrait) {
-		min-height: 80vw;
-		width: 100vw;
-		background-size: cover;
-		background-repeat: no-repeat;
-	}
+	min-height: 56.35vw;
 }
 
 //PROJECT PORTFOLIO IMAGE_______________________________
