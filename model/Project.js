@@ -82,9 +82,9 @@ function fillProject(section, project){
     }
     //add navigation events
     const next = section.querySelector('#project-carousel-next');
-    next.addEventListener('click',()=>slideRight());
+    next.addEventListener('click',()=>slideLeft());
     const prev = section.querySelector('#project-carousel-prev');
-    prev.addEventListener('click',()=>slideLeft());
+    prev.addEventListener('click',()=>slideRight());
 }
 
 const projectSection = document.querySelector('#project > div');
