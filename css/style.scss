@@ -1507,6 +1507,15 @@ ul{//list reset
 	min-height: 56.35vw;
 }
 
+//PROJECT PRODUCTS IMAGE 
+#project-products-image{
+	background-image: url('../media/products-image.png');
+	background-repeat: no-repeat;
+	background-size: 100% auto;
+	background-position: center;
+	min-height: 56.35vw;
+}
+
 //PROJECT PORTFOLIO IMAGE_______________________________
 #project-portfolio-image{
 	@include background('blue');
