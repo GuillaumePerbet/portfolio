@@ -39,6 +39,18 @@ projects.push(new Project(
     ['Wireframe', 'Intégration', 'Animations', 'Mailing', 'Responsive']
 ));
 
+projects.push(new Project(
+    'Products manager',
+    'Dashboard de suivi de produits',
+    'Août 2020 - Formation ACS',
+    'project-products.html',
+    'media/project-products.png',
+    'bureau avec un ordinateur montrant le tableau de bord de suivi de produits',
+    '5000',
+    '3300',
+    ['Front End', 'C R U D', 'T w i g', 'File upload', 'Validation']
+));
+
 //PROJECT CONTENT_____________________________________________________
 function fillProject(section, project){
     //fill title
