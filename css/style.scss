@@ -1360,6 +1360,24 @@ ul{//list reset
 	}
 }
 
+//TERMS AND CONDITIONS_____________________________
+#terms{
+    @include background('blue');
+	padding: 3rem 0;
+
+	h1{
+		@include color('red');
+	}
+
+	h2{
+		@include color('aqua');
+	}
+	
+	p{
+		font-family: "IBM-Regular", sans-serif;
+	}
+}
+
 //PROJECT TOP BAR___________________________________
 #top-bar{
 	&-return{//return button
@@ -1498,6 +1516,15 @@ ul{//list reset
 	
 }
 
+//PROJECT DROOPIST IMAGE________________________________
+#project-droopist-image{
+	background-image: url('../media/droopist-image.jpg');
+	background-repeat: no-repeat;
+	background-size: 100% auto;
+	background-position: center;
+	min-height: 56.35vw;
+}
+
 //PROJECT HIKING IMAGE________________________________
 #project-hiking-image{
 	background-image: url('../media/hiking-image.jpg');
@@ -1599,23 +1626,5 @@ ul{//list reset
 
 	#portfolio-stars{
 		width: 100vw;
-	}
-}
-
-//TERMS AND CONDITIONS_____________________________
-#terms{
-    @include background('blue');
-	padding: 3rem 0;
-
-	h1{
-		@include color('red');
-	}
-
-	h2{
-		@include color('aqua');
-	}
-	
-	p{
-		font-family: "IBM-Regular", sans-serif;
 	}
 }

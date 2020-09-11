@@ -16,6 +16,30 @@ class Project{
 const projects = [];
 
 projects.push(new Project(
+    'Droopist',
+    'Site de petites annonces',
+    'Septembre 2020 - Formation ACS',
+    'project-droopist.html',
+    'media/project-droopist.jpg',
+    'page de petites annonces d\'un journal',
+    '1300',
+    '865',
+    ['Back End', 'P O O', 'C R U D', 'Routing', 'Mailing']
+));
+
+projects.push(new Project(
+    'Products manager',
+    'Dashboard de suivi de produits',
+    'Août 2020 - Formation ACS',
+    'project-products.html',
+    'media/project-products.jpg',
+    'bureau avec un ordinateur montrant le tableau de bord de suivi de produits',
+    '5000',
+    '3300',
+    ['Front End', 'C R U D', 'T w i g', 'File upload', 'Validation']
+));
+
+projects.push(new Project(
     'Hiking',
     'Tableau de bord de gestion d’excursions',
     'Juillet 2020 - Formation ACS',
@@ -37,18 +61,6 @@ projects.push(new Project(
     '1087',
     '725',
     ['Wireframe', 'Intégration', 'Animations', 'Mailing', 'Responsive']
-));
-
-projects.push(new Project(
-    'Products manager',
-    'Dashboard de suivi de produits',
-    'Août 2020 - Formation ACS',
-    'project-products.html',
-    'media/project-products.jpg',
-    'bureau avec un ordinateur montrant le tableau de bord de suivi de produits',
-    '5000',
-    '3300',
-    ['Front End', 'C R U D', 'T w i g', 'File upload', 'Validation']
 ));
 
 //PROJECT CONTENT_____________________________________________________
