@@ -18,7 +18,7 @@ const projects = [];
 projects.push(new Project(
     'Droopist',
     'Site de petites annonces',
-    'Septembre 2020 - Formation ACS',
+    'Septembre 2020',
     'project-droopist.html',
     'media/project-droopist.jpg',
     'page de petites annonces d\'un journal',
@@ -28,21 +28,21 @@ projects.push(new Project(
 ));
 
 projects.push(new Project(
-    'Products manager',
-    'Dashboard de suivi de produits',
-    'Août 2020 - Formation ACS',
-    'project-products.html',
-    'media/project-products.jpg',
-    'bureau avec un ordinateur montrant le tableau de bord de suivi de produits',
-    '5000',
-    '3300',
-    ['Front End', 'C R U D', 'T w i g', 'File upload', 'Validation']
+    'Guillaume Perbet',
+    'Portfolio de développeur web',
+    'Juillet 2020',
+    'project-portfolio.html',
+    'media/project-portfolio.jpg',
+    'ordinateur, tablette et mobile avec une vue du portfolio à l\'écran',
+    '1087',
+    '725',
+    ['Wireframe', 'Intégration', 'Animations', 'Mailing', 'Responsive']
 ));
 
 projects.push(new Project(
     'Hiking',
     'Tableau de bord de gestion d’excursions',
-    'Juillet 2020 - Formation ACS',
+    'Juillet 2020',
     'project-hiking.html',
     'media/project-hiking.jpg',
     'ordinateur avec une vue du projet hiking à l\'écran',
@@ -52,15 +52,15 @@ projects.push(new Project(
 ));
 
 projects.push(new Project(
-    'Guillaume Perbet',
-    'Portfolio de développeur web',
-    'Juillet 2020 - Formation ACS',
-    'project-portfolio.html',
-    'media/project-portfolio.jpg',
-    'ordinateur, tablette et mobile avec une vue du portfolio à l\'écran',
-    '1087',
-    '725',
-    ['Wireframe', 'Intégration', 'Animations', 'Mailing', 'Responsive']
+    'Products manager',
+    'Dashboard de suivi de produits',
+    'Août 2020',
+    'project-products.html',
+    'media/project-products.jpg',
+    'bureau avec un ordinateur montrant le tableau de bord de suivi de produits',
+    '5000',
+    '3300',
+    ['Front End', 'C R U D', 'T w i g', 'File upload', 'Validation']
 ));
 
 //PROJECT CONTENT_____________________________________________________
