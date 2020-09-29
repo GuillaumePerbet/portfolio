@@ -12,7 +12,7 @@
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 </head>
 
-<body id="project-page">
+<body id="project-page" itemscope itemtype="https://schema.org/WebSite">
 
     <!-- FIXED TOP BAR -->
     <div id="top-bar" class="container-fluid fixed-top transparent">
@@ -58,7 +58,7 @@
         <!-- home image -->
         <div class="container">
             <div id="project-home-image" class="row">
-                <div class="col-12 text-center">
+                <div class="col-12 text-center" itemprop="image">
                     <img src="media/project-droopist.jpg" alt="page de petites annonces d\'un journal" width="1300" height="875">
                 </div>
             </div>
@@ -73,7 +73,7 @@
             <!-- description text -->
             <div class="row mb-4">
                 <div class="col-12">
-                    <div id="project-description-text">
+                    <div id="project-description-text" itemprop="description">
                         <p class="mb-1"><span class="red">></span> <strong>Travail en équipe</strong> avec séparation du front end et du back end.</p>
                         <p class="mb-1"><span class="red">></span> Réalisation du back end en <strong>Programmation Orientée Objet</strong> PHP.</p>
                         <p class="mb-1"><span class="red">></span> Fonctionnalités <strong>Create Read Update Delete</strong> sur une base de données SQL.</p>
@@ -89,10 +89,10 @@
 
                 <!-- description title -->
                 <div class="col-12 col-sm-12 col-lg-6 mb-3 mb-sm-3 mb-lg-0">
-                    <p class="m-0">DROOPIST,</p>
-                    <p class="m-0">Site de petites annonces</p>
-                    <p class="regular m-0">Septembre 2020 - Formation ACS</p>
-                    <p class="m-0"><a href="https://github.com/GuillaumePerbet/classified-ads" target="_blank" rel="noopener noreferrer">> Voir le code</a></p>
+                    <p class="m-0" itemprop="name">DROOPIST,</p>
+                    <p class="m-0" itemprop="about">Site de petites annonces</p>
+                    <p class="regular m-0"><span itemprop="dateCreated">Septembre 2020</span> -  <span itemprop="locationCreated">Formation ACS</span></p>
+                    <p class="m-0" itemprop="contentLocation"><a href="https://github.com/GuillaumePerbet/classified-ads" target="_blank" rel="noopener noreferrer">> Voir le code</a></p>
                 </div>
 
                 <!-- description link -->
@@ -100,14 +100,14 @@
                     <div>
                         <p class="m-0">Réalisation du front end</p>
                         <p class="m-0">par <a href="https://blondelguillau.me/" target="_blank" rel="noopener noreferrer">GUILLAUME BLONDEL</a>,</p>
-                        <p class="m-0"><a href="https://droopist.guillaumeperbet.fr/" target="_blank" rel="noopener noreferrer">> Tester l'application</a></p>
+                        <p class="m-0" itemprop="exampleOfWork"><a href="https://droopist.guillaumeperbet.fr/" target="_blank" rel="noopener noreferrer">> Tester l'application</a></p>
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- IMAGE -->
-        <section id="project-droopist-image" class="container-fluid">
+        <section id="project-droopist-image" class="container-fluid" itemprop="image">
         </section>
     </main>
 

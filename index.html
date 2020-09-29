@@ -19,8 +19,8 @@
         <div class="row mt-4 mt-sm-4 mt-xl-5">
             
             <!-- top bar logo -->
-            <div class="col-3 col-sm-3 col-xl-1 text-center">
-                <a href="#home" class="clickable"><img id="top-bar-logo" src="media/logo.png" alt="lettre g et p arrondies et inclinées avec un effet d'épaisseur" width="123" height="85"></a>
+            <div class="col-3 col-sm-3 col-xl-1 text-center" itemscope itemtype="https://schema.org/Brand">
+                <a href="#home" class="clickable" itemprop="logo" ><img id="top-bar-logo" src="media/logo.png" alt="lettre g et p arrondies et inclinées avec un effet d'épaisseur" width="123" height="85"></a>
             </div>
 
             <!-- top bar menu button -->
@@ -53,16 +53,16 @@
     </div>
 
     <!-- HOME -->
-    <header id="home" class="container-fluid d-flex flex-column justify-content-center">
+    <header id="home" class="container-fluid d-flex flex-column justify-content-center" itemscope itemtype="https://schema.org/Person">
 
         <!-- home title -->
         <div class="row mb-3 mb-sm-3 mb-xl-0">
             <h1 class="col-12 col-sm-12 col-md-10 offset-md-1 col-xl-8 offset-xl-2">
-                <span class="d-flex justify-content-between">
+                <span class="d-flex justify-content-between" itemprop="givenName">
                     <span id="letter-1">G</span><span id="letter-2">U</span><span id="letter-3">I</span><span id="letter-4">L</span><span id="letter-5">L</span><span id="letter-6">A</span><span id="letter-7">U</span><span id="letter-8">M</span><span id="letter-9">E</span>
                 </span>
 
-                <span class="d-flex justify-content-between align-items-center">
+                <span class="d-flex justify-content-between align-items-center" itemprop="familyName">
                     <span id="letter-10">P</span><span id="letter-11">E</span><span id="letter-12">R</span><span id="letter-13">B</span><span id="letter-14">E</span><span id="letter-15">T</span>
                 </span>
             </h1>
@@ -71,7 +71,7 @@
         <!-- home subtitle -->
         <div class="row">
             <section class="col-12 col-sm-12 col-md-11 offset-md-1 col-xl-6 offset-xl-2">
-                <h2 class="d-flex"><span>Développeur Web, Mobile,<br/> Backend, Frontend,<br/> à Besançon<span class="red">.</span></span></h2>
+                <h2 class="d-flex"><span><span itemprop="jobTitle">Développeur Web</span>, Mobile,<br/> Backend, Frontend,<br/> à <span itemprop="workLocation">Besançon</span><span class="red">.</span></span></h2>
             </section>
         </div>
 
@@ -95,21 +95,21 @@
                 <!-- about title -->
                 <header class="row">
                     <div class="col-12 col-sm-12 col-lg-10 offset-lg-1 col-xl-8 offset-xl-2">
-                        <h2 class="my-3 my-sm-3 my-xl-4 text-center">UN EX-PROF DE MATHS SE MET EN ORBITE AUTOUR DU WEB<span class="red">.</span></h2>
+                        <h2 class="my-3 my-sm-3 my-xl-4 text-center" itemprop="hasOccupation">UN EX-PROF DE MATHS SE MET EN ORBITE AUTOUR DU WEB<span class="red">.</span></h2>
                     </div>
                 </header>
 
                 <!-- about status -->
                 <div class="row">
                     <div class="col-12 col-sm-12 col-lg-8 offset-lg-2 col-xl-6 offset-xl-3">
-                        <p id="about-status" class="text-center">Souhaite intégrer un équipage pour une mission <strong>d’octobre à décembre 2020</strong>.</p>
+                        <p id="about-status" class="text-center" itemprop="seek">Souhaite intégrer un équipage pour une mission <strong>d’octobre à décembre 2020</strong>.</p>
                     </div>
                 </div>
 
                 <!-- about portrait -->
                 <div class="row">
                     <div class="col-12 col-sm-12 col-xl-6 offset-xl-3">
-                        <p id="about-portrait" class="d-flex justify-content-center align-items-center">
+                        <p id="about-portrait" class="d-flex justify-content-center align-items-center" itemprop="image">
                             <img src="media/about-portrait.png" alt="portrait de Guillaume Perbet" width="230" height="230">
                         </p>
                     </div>
@@ -151,12 +151,12 @@
 
                 <!-- bdd skill -->
                 <div class="col-6 col-sm-5 offset-sm-1 col-md-4 offset-md-2 col-lg-3 offset-lg-2 col-xl-2 offset-xl-1 d-flex align-items-end justify-content-center">
-                    <p id="skill-bdd" class="h-100 d-flex flex-column justify-content-between align-items-center text-center">Mise en place de bases de données</p>
+                    <p id="skill-bdd" class="h-100 d-flex flex-column justify-content-between align-items-center text-center" itemprop="knowsAbout">Mise en place de bases de données</p>
                 </div>
 
                 <!-- dynamic skill -->
                 <div class="col-6 col-sm-5 col-md-4 col-lg-3 offset-lg-2 col-xl-2 offset-xl-1 d-flex align-items-end justify-content-center">
-                    <p id="skill-dynamic" class="h-100 d-flex flex-column justify-content-between align-items-center text-center">Création de contenus dynamiques</p>
+                    <p id="skill-dynamic" class="h-100 d-flex flex-column justify-content-between align-items-center text-center" itemprop="knowsAbout">Création de contenus dynamiques</p>
                 </div>
             </div>
     
@@ -164,12 +164,12 @@
 
                 <!-- integration skill -->
                 <div class="col-6 col-sm-5 offset-sm-1 col-md-4 offset-md-2 col-lg-3 offset-lg-2 col-xl-2 offset-xl-1 d-flex align-items-end justify-content-center">
-                    <p id="skill-integration" class="h-100 d-flex flex-column justify-content-between align-items-center text-center">Intégration desktop & mobile</p>
+                    <p id="skill-integration" class="h-100 d-flex flex-column justify-content-between align-items-center text-center" itemprop="knowsAbout">Intégration desktop & mobile</p>
                 </div>
 
                 <!-- secure skill -->
                 <div class="col-6 col-sm-5 col-md-4 col-lg-3 offset-lg-2 col-xl-2 offset-xl-1 d-flex align-items-end justify-content-center">
-                    <p id="skill-secure" class="h-100 d-flex flex-column justify-content-between align-items-center text-center">Sécurisation des informations</p>
+                    <p id="skill-secure" class="h-100 d-flex flex-column justify-content-between align-items-center text-center" itemprop="knowsAbout">Sécurisation des informations</p>
                 </div>
             </div>
 
@@ -352,7 +352,7 @@
                 </a>
 
                 <!-- mail xl -->
-                <address class="d-flex align-items-center"><a href="mailto:perbet.dev@gmail.com">perbet.dev@gmail.com</a></address>
+                <address class="d-flex align-items-center"><a href="mailto:perbet.dev@gmail.com" itemprop="email">perbet.dev@gmail.com</a></address>
             </div>
         
             <!-- bottom terms xl -->
@@ -379,7 +379,7 @@
 
                         <!-- bottom mail xs -->
                         <div class="col-12 col-sm-12">
-                            <address><a href="mailto:perbet.dev@gmail.com">perbet.dev@gmail.com</a></address>
+                            <address><a href="mailto:perbet.dev@gmail.com" itemprop="email">perbet.dev@gmail.com</a></address>
                         </div>
 
                     </div>

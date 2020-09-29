@@ -12,7 +12,7 @@
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 </head>
 
-<body id="project-page">
+<body id="project-page" itemscope itemtype="https://schema.org/WebSite">
 
     <!-- FIXED TOP BAR -->
     <div id="top-bar" class="container-fluid fixed-top transparent">
@@ -58,7 +58,7 @@
         <!-- home image -->
         <div class="container">
             <div id="project-home-image" class="row">
-                <div class="col-12 text-center">
+                <div class="col-12 text-center" itemprop="image">
                     <img src="media/products-home.png" alt="ordinateur avec une vue du tableau de bord de gestion de produits à l'écran" width="2484" height="1985">
                 </div>
             </div>
@@ -73,7 +73,7 @@
             <!-- description text -->
             <div class="row mb-4">
                 <div class="col-12">
-                    <div id="project-description-text">
+                    <div id="project-description-text" itemprop="description">
                         <p class="mb-1"><span class="red">></span> <strong>Travail en équipe</strong> avec séparation du front end et du back end.</p>
                         <p class="mb-1"><span class="red">></span> Réalisation du front end basé sur un <strong>template Bootstrap</strong>.</p>
                         <p class="mb-1"><span class="red">></span> Utilisation du moteur de template <strong>Twig</strong>.</p>
@@ -87,26 +87,26 @@
 
                 <!-- description title -->
                 <div class="col-12 col-sm-12 col-lg-6 mb-3 mb-sm-3 mb-lg-0">
-                    <p class="m-0">PRODUCTS MANAGER,</p>
-                    <p class="m-0">Dashboard de suivi de produits</p>
-                    <p class="regular m-0">Août 2020 - Formation ACS</p>
-                    <p class="m-0"><a href="https://github.com/GuillaumePerbet/crud-produits" target="_blank" rel="noopener noreferrer">> Voir le code</a></p>
+                    <p class="m-0" itemprop="name">PRODUCTS MANAGER,</p>
+                    <p class="m-0" itemprop="about">Dashboard de suivi de produits</p>
+                    <p class="regular m-0"><span itemprop="dateCreated">Août 2020</span> - <span itemprop="locationCreated">Formation ACS</span></p>
+                    <p class="m-0" itemprop="contentLocation"><a href="https://github.com/GuillaumePerbet/crud-produits" target="_blank" rel="noopener noreferrer">> Voir le code</a></p>
                 </div>
 
                 <!-- description link -->
                 <div class="col-12 col-sm-12 col-lg-6 d-lg-flex justify-content-end">
                     <div>
-                        <p class="m-0"><a href="https://blondelguillau.me/" target="_blank" rel="noopener noreferrer">GUILLAUME BLONDEL</a>, back end</p>
+                        <p class="m-0"><a href="https://blondelguillau.me/" target="_blank" rel="noopener noreferrer" itemprop="contributor">GUILLAUME BLONDEL</a>, back end</p>
                         <p class="m-0">Utilisateur: <span class="regular">admin@login.com</span></p>
                         <p class="m-0">Mot de passe: <span class="regular">12345</span></p>
-                        <p class="m-0"><a href="https://products.guillaumeperbet.fr/" target="_blank" rel="noopener noreferrer">> Tester l'application</a></p>
+                        <p class="m-0"  itemprop="exampleOfWork"><a href="https://products.guillaumeperbet.fr/" target="_blank" rel="noopener noreferrer">> Tester l'application</a></p>
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- IMAGE -->
-        <section id="project-products-image" class="container-fluid d-none d-md-block">
+        <section id="project-products-image" class="container-fluid d-none d-md-block"  itemprop="image">
             
         </section>
     </main>
