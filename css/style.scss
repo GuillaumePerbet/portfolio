@@ -638,7 +638,7 @@ ul{//list reset
 		}
 	}
 
-	a{//about buttons
+	a:not(.no-style){//about buttons
 		display: block;
 		@include color('aqua');
 		@include background('white');
@@ -665,6 +665,10 @@ ul{//list reset
 			@include size(16);
 			max-width: 16rem;
 		}
+	}
+
+	a.no-style{
+		text-decoration: underline;
 	}
 
 	//about background
