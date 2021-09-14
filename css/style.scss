@@ -1,3 +1,5 @@
+@use 'sass:math';
+
 //FONTS_________________________________________________________________
 @font-face {
 	font-family: 'IBM-Regular';
@@ -31,7 +33,7 @@
 
 //FONTS AND COLORS____________________________________________________
 @mixin size($size){//font size mixin
-	font-size: #{$size/16}rem;
+	font-size: #{math.div($size, 16)}rem;
 }
 
 $colors : (//colors table
@@ -347,19 +349,19 @@ ul{//list reset
 							transform: translate(0,0);
 						}
 						20%{
-							transform: translate(random(200) / 100 - 1 + vw, random(200) / 100 - 1 + vw);
+							transform: translate(math.div(random(200), 100) - 1 + vw, math.div(random(200), 100) - 1 + vw);
 						}
 						40%{
-							transform: translate(random(200) / 100 - 1 + vw, random(200) / 100 - 1 + vw);
+							transform: translate(math.div(random(200), 100) - 1 + vw, math.div(random(200), 100) - 1 + vw);
 						}
 						60%{
-							transform: translate(random(200) / 100 - 1 + vw, random(200) / 100 - 1 + vw);
+							transform: translate(math.div(random(200), 100) - 1 + vw, math.div(random(200), 100) - 1 + vw);
 						}
 						80%{
-							transform: translate(random(200) / 100 - 1 + vw, random(200) / 100 - 1 + vw);
+							transform: translate(math.div(random(200), 100) - 1 + vw, math.div(random(200), 100) - 1 + vw);
 						}
 						100%{
-							transform: translate(random(200) / 100 - 1 + vw, random(200) / 100 - 1 + vw);
+							transform: translate(math.div(random(200), 100) - 1 + vw, math.div(random(200), 100) - 1 + vw);
 						}
 					}
 
@@ -368,19 +370,19 @@ ul{//list reset
 							transform: translate(0,0);
 						}
 						20%{
-							transform: translate(random(200) / 100 - 1 + vw, random(200) / 100 - 1 + vw);
+							transform: translate(math.div(random(200), 100) - 1 + vw, math.div(random(200), 100) - 1 + vw);
 						}
 						40%{
-							transform: translate(random(200) / 100 - 1 + vw, random(200) / 100 - 1 + vw);
+							transform: translate(math.div(random(200), 100) - 1 + vw, math.div(random(200), 100) - 1 + vw);
 						}
 						60%{
-							transform: translate(random(200) / 100 - 1 + vw, random(200) / 100 - 1 + vw);
+							transform: translate(math.div(random(200), 100) - 1 + vw, math.div(random(200), 100) - 1 + vw);
 						}
 						80%{
-							transform: translate(random(200) / 100 - 1 + vw, random(200) / 100 - 1 + vw);
+							transform: translate(math.div(random(200), 100) - 1 + vw, math.div(random(200), 100) - 1 + vw);
 						}
 						100%{
-							transform: translate(random(200) / 100 - 1 + vw, random(200) / 100 - 1 + vw);
+							transform: translate(math.div(random(200), 100) - 1 + vw, math.div(random(200), 100) - 1 + vw);
 						}
 					}
 
@@ -389,23 +391,23 @@ ul{//list reset
 							transform: translate(0,0);
 						}
 						20%{
-							transform: translate(random(200) / 100 - 1 + vw, random(200) / 100 - 1 + vw);
+							transform: translate(math.div(random(200), 100) - 1 + vw, math.div(random(200), 100) - 1 + vw);
 						}
 						40%{
-							transform: translate(random(200) / 100 - 1 + vw, random(200) / 100 - 1 + vw);
+							transform: translate(math.div(random(200), 100) - 1 + vw, math.div(random(200), 100) - 1 + vw);
 						}
 						60%{
-							transform: translate(random(200) / 100 - 1 + vw, random(200) / 100 - 1 + vw);
+							transform: translate(math.div(random(200), 100) - 1 + vw, math.div(random(200), 100) - 1 + vw);
 						}
 						80%{
-							transform: translate(random(200) / 100 - 1 + vw, random(200) / 100 - 1 + vw);
+							transform: translate(math.div(random(200), 100) - 1 + vw, math.div(random(200), 100) - 1 + vw);
 						}
 						100%{
-							transform: translate(random(200) / 100 - 1 + vw, random(200) / 100 - 1 + vw);
+							transform: translate(math.div(random(200), 100) - 1 + vw, math.div(random(200), 100) - 1 + vw);
 						}
 					}
 
-					animation: float-#{$i} 7s $i/10+s alternate infinite linear;
+					animation: float-#{$i} 7s math.div($i, 10)+s alternate infinite linear;
 				}
 			}
 
