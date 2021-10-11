@@ -17,7 +17,7 @@ const projects = [];
 
 projects.push(new Project(
     'Droopist',
-    'Site de petites annonces (formation)',
+    'Site de petites annonces (en formation)',
     'Septembre 2020',
     'project-droopist.html',
     'media/project-droopist.jpg',
@@ -41,7 +41,7 @@ projects.push(new Project(
 
 projects.push(new Project(
     'Hiking',
-    'Tableau de bord de gestion d’excursions (formation)',
+    'Tableau de bord de gestion d’excursions (en formation)',
     'Juillet 2020',
     'project-hiking.html',
     'media/project-hiking.jpg',
@@ -53,7 +53,7 @@ projects.push(new Project(
 
 projects.push(new Project(
     'Products manager',
-    'Dashboard de suivi de produits (formation)',
+    'Dashboard de suivi de produits (en formation)',
     'Août 2020',
     'project-products.html',
     'media/project-products.jpg',
@@ -69,10 +69,22 @@ projects.push(new Project(
     'Novembre 2020',
     'project-shine.html',
     'media/project-shine.png',
-    'Page d\'accueil du site shine-group.tech',
+    'les quatre logos des filiales de Shine Group',
     '2190',
     '1458',
     ['Maquettage', 'Intégration', 'Vue.js', 'Vuetify', 'Déclinaison']
+));
+
+projects.push(new Project(
+    'MyTeam',
+    'Site vitrine pour l\'application myteam',
+    'Février 2021',
+    'project-myteam.html',
+    'media/project-myteam.png',
+    'logo de MyTeam',
+    '730',
+    '486',
+    ['Maquettage', 'Intégration', 'Vue.js', 'Vuetify', 'Équipe']
 ));
 
 //PROJECT CONTENT_____________________________________________________
