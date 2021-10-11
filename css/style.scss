@@ -1567,6 +1567,15 @@ ul{//list reset
 	min-height: 43vw;
 }
 
+//PROJECT ACE IMAGE 
+#project-myteam-image{
+	background-image: url('../media/ace-image.png');
+	background-repeat: no-repeat;
+	background-size: 100% auto;
+	background-position: center;
+	min-height: 43vw;
+}
+
 //PROJECT PORTFOLIO IMAGE_______________________________
 #project-portfolio-image{
 	@include background('blue');

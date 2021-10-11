@@ -87,6 +87,18 @@ projects.push(new Project(
     ['Maquettage', 'Intégration', 'Vue.js', 'Vuetify', 'Équipe']
 ));
 
+projects.push(new Project(
+    'ACE',
+    'Application web de création et diffusion de contenu pour l\'industrie',
+    '2021',
+    'project-ace.html',
+    'media/project-ace.png',
+    'logo de ACE',
+    '730',
+    '486',
+    ['Laravel', 'Nuxt.js', 'Vuetify', 'API REST', 'Login']
+));
+
 //PROJECT CONTENT_____________________________________________________
 function fillProject(section, project){
     //fill title
