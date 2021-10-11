@@ -17,7 +17,7 @@ const projects = [];
 
 projects.push(new Project(
     'Droopist',
-    'Site de petites annonces',
+    'Site de petites annonces (formation)',
     'Septembre 2020',
     'project-droopist.html',
     'media/project-droopist.jpg',
@@ -41,7 +41,7 @@ projects.push(new Project(
 
 projects.push(new Project(
     'Hiking',
-    'Tableau de bord de gestion d’excursions',
+    'Tableau de bord de gestion d’excursions (formation)',
     'Juillet 2020',
     'project-hiking.html',
     'media/project-hiking.jpg',
@@ -53,7 +53,7 @@ projects.push(new Project(
 
 projects.push(new Project(
     'Products manager',
-    'Dashboard de suivi de produits',
+    'Dashboard de suivi de produits (formation)',
     'Août 2020',
     'project-products.html',
     'media/project-products.jpg',
