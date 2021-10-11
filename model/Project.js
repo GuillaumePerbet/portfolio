@@ -63,6 +63,18 @@ projects.push(new Project(
     ['Front End', 'C R U D', 'T w i g', 'File upload', 'Validation']
 ));
 
+projects.push(new Project(
+    'Sites Shine',
+    'Sites corporate pour la société Shine Group',
+    'Novembre 2020',
+    'project-shine.html',
+    'media/project-shine.png',
+    'Page d\'accueil du site shine-group.tech',
+    '2190',
+    '1458',
+    ['Maquettage', 'Intégration', 'Vue.js', 'Vuetify', 'Déclinaison']
+));
+
 //PROJECT CONTENT_____________________________________________________
 function fillProject(section, project){
     //fill title

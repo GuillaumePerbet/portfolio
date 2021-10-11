@@ -1549,6 +1549,15 @@ ul{//list reset
 	min-height: 56.35vw;
 }
 
+//PROJECT PRODUCTS IMAGE 
+#project-shine-image{
+	background-image: url('../media/shine-image.jpg');
+	background-repeat: no-repeat;
+	background-size: 100% auto;
+	background-position: center;
+	min-height: 43vw;
+}
+
 //PROJECT PORTFOLIO IMAGE_______________________________
 #project-portfolio-image{
 	@include background('blue');
