@@ -16,54 +16,6 @@ class Project{
 const projects = [];
 
 projects.push(new Project(
-    'Droopist',
-    'Site de petites annonces (en formation)',
-    'Septembre 2020',
-    'project-droopist.html',
-    'media/project-droopist.jpg',
-    'page de petites annonces d\'un journal',
-    '6800',
-    '4800',
-    ['Back End', 'P O O', 'C R U D', 'Routing', 'Mailing']
-));
-
-projects.push(new Project(
-    'Guillaume Perbet',
-    'Portfolio de développeur web',
-    'Juillet 2020',
-    'project-portfolio.html',
-    'media/project-portfolio.jpg',
-    'ordinateur, tablette et mobile avec une vue du portfolio à l\'écran',
-    '1087',
-    '725',
-    ['Wireframe', 'Intégration', 'Animations', 'Mailing', 'Responsive']
-));
-
-projects.push(new Project(
-    'Hiking',
-    'Tableau de bord de gestion d’excursions (en formation)',
-    'Juillet 2020',
-    'project-hiking.html',
-    'media/project-hiking.jpg',
-    'ordinateur avec une vue du projet hiking à l\'écran',
-    '5000',
-    '3334',
-    ['Back End', 'Front End', 'C R U D', 'A J A X', 'Responsive']
-));
-
-projects.push(new Project(
-    'Products manager',
-    'Dashboard de suivi de produits (en formation)',
-    'Août 2020',
-    'project-products.html',
-    'media/project-products.jpg',
-    'bureau avec un ordinateur montrant le tableau de bord de suivi de produits',
-    '5000',
-    '3300',
-    ['Front End', 'C R U D', 'T w i g', 'File upload', 'Validation']
-));
-
-projects.push(new Project(
     'Sites Shine',
     'Sites corporate pour la société Shine Group',
     'Novembre 2020',
@@ -97,6 +49,54 @@ projects.push(new Project(
     '1088',
     '536',
     ['Laravel', 'Nuxt.js', 'Vuetify', 'API REST', 'Login']
+));
+
+projects.push(new Project(
+    'Guillaume Perbet',
+    'Portfolio de développeur web',
+    'Juillet 2020',
+    'project-portfolio.html',
+    'media/project-portfolio.jpg',
+    'ordinateur, tablette et mobile avec une vue du portfolio à l\'écran',
+    '1087',
+    '725',
+    ['Wireframe', 'Intégration', 'Animations', 'Mailing', 'Responsive']
+));
+
+projects.push(new Project(
+    'Droopist',
+    'Site de petites annonces (en formation)',
+    'Septembre 2020',
+    'project-droopist.html',
+    'media/project-droopist.jpg',
+    'page de petites annonces d\'un journal',
+    '6800',
+    '4800',
+    ['Back End', 'P O O', 'C R U D', 'Routing', 'Mailing']
+));
+
+projects.push(new Project(
+    'Hiking',
+    'Tableau de bord de gestion d’excursions (en formation)',
+    'Juillet 2020',
+    'project-hiking.html',
+    'media/project-hiking.jpg',
+    'ordinateur avec une vue du projet hiking à l\'écran',
+    '5000',
+    '3334',
+    ['Back End', 'Front End', 'C R U D', 'A J A X', 'Responsive']
+));
+
+projects.push(new Project(
+    'Products manager',
+    'Dashboard de suivi de produits (en formation)',
+    'Août 2020',
+    'project-products.html',
+    'media/project-products.jpg',
+    'bureau avec un ordinateur montrant le tableau de bord de suivi de produits',
+    '5000',
+    '3300',
+    ['Front End', 'C R U D', 'T w i g', 'File upload', 'Validation']
 ));
 
 //PROJECT CONTENT_____________________________________________________
