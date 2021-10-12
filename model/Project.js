@@ -88,14 +88,14 @@ projects.push(new Project(
 ));
 
 projects.push(new Project(
-    'ACE',
-    'Application web de création et diffusion de contenu pour l\'industrie',
+    'PF4H',
+    'Application web de création et diffusion de contenu dans le cadre du projet 4hfactory',
     '2021',
-    'project-ace.html',
-    'media/project-ace.png',
+    'project-pf4h.html',
+    'media/project-pf4h.png',
     'logo de ACE',
-    '730',
-    '486',
+    '1088',
+    '536',
     ['Laravel', 'Nuxt.js', 'Vuetify', 'API REST', 'Login']
 ));
 
