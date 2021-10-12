@@ -22,8 +22,8 @@ projects.push(new Project(
     'project-droopist.html',
     'media/project-droopist.jpg',
     'page de petites annonces d\'un journal',
-    '1300',
-    '865',
+    '6800',
+    '4800',
     ['Back End', 'P O O', 'C R U D', 'Routing', 'Mailing']
 ));
 
