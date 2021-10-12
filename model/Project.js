@@ -34,8 +34,8 @@ projects.push(new Project(
     'project-myteam.html',
     'media/project-myteam.png',
     'logo de MyTeam',
-    '730',
-    '486',
+    '1280',
+    '720',
     ['Maquettage', 'Intégration', 'Vue.js', 'Vuetify', 'Équipe']
 ));
 
